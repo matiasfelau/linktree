@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Rally! - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                Just Rally!
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articulos.html">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre_mi.html">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video class="hero-video hero-video-desktop" autoplay muted loop playsinline>
+            <source src="vid/hero-desktop.mp4" type="video/mp4">
+        </video>
+        <video class="hero-video hero-video-mobile" autoplay muted loop playsinline>
+            <source src="vid/hero-mobile.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Just Rally!</h1>
+            <p class="hero-description">
+                Adrenalina pura, curvas cerradas y motores rugiendo. Descubrí el mundo del rally como nunca antes: 
+                carreras épicas, análisis técnicos y toda la pasión del deporte motor en un solo lugar. 🏁
+            </p>
+            <a href="#articulos" class="hero-cta">Explorar Artículos</a>
+        </div>
+    </section>
+
+    <main class="main-container" id="articulos">
+        <section class="articles-section">
+            <!-- Artículo 1: Tommi Mäkinen -->
+            <article class="article-card">
+                <div class="article-categories">
+                    <span class="category-tag">Pilotos</span>
+                </div>
+                <h2 class="article-title">👑 Tommi Mäkinen: El Arquitecto de una Dinastía y el Renacimiento de un Gigante en el WRC</h2>
+                <p class="article-meta">Por Matías Felau • 9 de Noviembre, 2025</p>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/makinen-mobile.jpg">
+                    <img src="img/makinen-desktop.jpg" alt="Tommi Mäkinen" class="article-image">
+                </picture>
+                <p class="article-excerpt">
+                    Tommi Mäkinen redefinió la consistencia y velocidad en el WRC con cuatro títulos mundiales consecutivos (1996-1999) al volante del Mitsubishi Lancer Evolution. Su dominio no terminó al retirarse: como Director de Toyota Gazoo Racing, lideró el regreso triunfal de Toyota al WRC con títulos de Constructores (2018) y Pilotos (2019). Una figura bicéfala de la historia del rally: tetracampeón invicto y arquitecto del éxito moderno de Toyota.
+                </p>
+                <a href="articulo1.html" class="read-more-btn">Leer Más →</a>
+            </article>
+
+            <!-- Artículo 2: Subaru Impreza WRC -->
+            <article class="article-card">
+                <div class="article-categories">
+                    <span class="category-tag">Autos</span>
+                </div>
+                <h2 class="article-title">🔷 Subaru Impreza WRC: El Ícono Azul y Oro que Redefinió la Tracción Total</h2>
+                <p class="article-meta">Por Matías Felau • 9 de Noviembre, 2025</p>
+                <img src="img/subaru-desktop.jpg" alt="Subaru Impreza WRC" class="article-image">
+                <p class="article-excerpt">
+                    El Subaru Impreza WRC, con su librea azul y dorada, motor bóxer turboalimentado y tracción total simétrica, se convirtió en leyenda automotriz. Tres títulos de pilotos (Colin McRae 1995, Richard Burns 2001, Petter Solberg 2003) y tres de Constructores consolidaron su dominio. Su legado trasciende la competición: las versiones WRX y STi llevaron el ADN del rally a las calles, creando un fenómeno cultural global en el mundo JDM.
+                </p>
+                <a href="articulo2.html" class="read-more-btn">Leer Más →</a>
+            </article>
+
+            <!-- Artículo 3: Sébastien Loeb -->
+            <article class="article-card">
+                <div class="article-categories">
+                    <span class="category-tag">Pilotos</span>
+                </div>
+                <h2 class="article-title">🐐 Sébastien Loeb: El Dominio Inquebrantable y la Revolución del Asfalto</h2>
+                <p class="article-meta">Por Matías Felau • 9 de Noviembre, 2025</p>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/loeb-mobile.jpg">
+                    <img src="img/loeb-desktop.jpg" alt="Sébastien Loeb" class="article-image">
+                </picture>
+                <p class="article-excerpt">
+                    Nueve títulos mundiales consecutivos (2004-2012), 80 victorias en el WRC y 118 podios. Sébastien Loeb no solo reescribió los récords del rally, sino que estableció un dominio estadístico probablemente insuperable. Rey del asfalto con Citroën, su precisión quirúrgica y consistencia en todas las superficies lo convierten en el G.O.A.T. del WRC. Su versatilidad se extiende al Dakar, Rallycross y su récord histórico en Pikes Peak (2013).
+                </p>
+                <a href="articulo3.html" class="read-more-btn">Leer Más →</a>
+            </article>
+
+            <!-- Artículo 4: Pikes Peak -->
+            <article class="article-card">
+                <div class="article-categories">
+                    <span class="category-tag">Localizaciones</span>
+                </div>
+                <h2 class="article-title">⛰️ Pikes Peak: La "Carrera Hacia las Nubes" y el Laboratorio de Potencia Extrema</h2>
+                <p class="article-meta">Por Matías Felau • 9 de Noviembre, 2025</p>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/pikes-mobile.jpg">
+                    <img src="img/pikes-desktop.jpg" alt="Pikes Peak International Hill Climb" class="article-image">
+                </picture>
+                <p class="article-excerpt">
+                    20 kilómetros, 156 curvas y 4.302 metros de altitud. Pikes Peak es una contrarreloj brutal donde los motores pierden hasta 30% de potencia. Desde Ari Vatanen en 1988 con el Audi Quattro hasta el récord actual del Volkswagen I.D. R eléctrico (7:57.148), esta carrera ha sido campo de batalla para leyendas del rally. La pavimentación completa en 2012 la transformó en laboratorio de aerodinámica extrema y tecnología EV.
+                </p>
+                <a href="articulo4.html" class="read-more-btn">Leer Más →</a>
+            </article>
+
+            <!-- Artículo 5: Rally Safari de Kenia -->
+            <article class="article-card">
+                <div class="article-categories">
+                    <span class="category-tag">Localizaciones</span>
+                </div>
+                <h2 class="article-title">🦁 Rally Safari de Kenia: La Supervivencia Mecánica y el Test Definitivo de Resistencia</h2>
+                <p class="article-meta">Por Matías Felau • 9 de Noviembre, 2025</p>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/safari-mobile.jpg">
+                    <img src="img/safari-desktop.jpg" alt="Rally Safari de Kenia" class="article-image">
+                </picture>
+                <p class="article-excerpt">
+                    Miles de kilómetros de polvo, rocas, fesh-fesh y cruces de ríos. El Rally Safari de Kenia era una odisea épica de supervivencia mecánica donde los coches de apoyo volador y las reparaciones in situ eran esenciales. Dominado por vehículos japoneses indestructibles (Toyota Celica, Datsun), regresó al WRC en 2021 conservando su espíritu brutal. Un recordatorio de cuando el rally era tanto velocidad como resistencia contra los elementos.
+                </p>
+                <a href="articulo5.html" class="read-more-btn">Leer Más →</a>
+            </article>
+
+            <!-- Paginación -->
+            <nav aria-label="Paginación de artículos">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <aside class="sidebar">
+            <!-- Perfil -->
+            <div class="sidebar-card profile-card">
+                <div class="profile-image-container">
+                    <img src="img/foto-perfil.jpeg" alt="Foto de Perfil de Matías" class="profile-image">
+                </div>
+                <h3 class="profile-greeting">¡Hola, soy Matías!</h3>
+                <p class="profile-description">
+                    Soy un aficionado al rally que disfruta cada curva cerrada, cada derrape perfecto y cada grito de "¡SAMIR, ESCUCHAME!" 🏁
+                </p>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="sidebar-card social-card">
+                <h4 class="sidebar-title">Conectemos</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/matiasfelau" class="social-icon github-icon" title="GitHub" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/matiasfelau/" class="social-icon instagram-icon" title="Instagram" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/matthfelau" class="social-icon twitter-icon" title="Twitter" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Artículos Populares -->
+            <div class="sidebar-card">
+                <h4 class="sidebar-title">Artículos Populares</h4>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item">
+                        <a href="articulo2.html">Subaru Impreza WRC: Ícono Azul y Oro</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="articulo1.html">Tommi Mäkinen: Arquitecto de una Dinastía</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="articulo4.html">Pikes Peak: La Carrera Hacia las Nubes</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Categorías -->
+            <div class="sidebar-card">
+                <h4 class="sidebar-title">Categorías</h4>
+                <ul class="sidebar-list categories-list">
+                    <li class="sidebar-list-item">
+                        <a href="#articulos">Autos</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#articulos">Pilotos</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#articulos">Localizaciones</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Suscripción Newsletter -->
+            <div class="sidebar-card subscribe-card">
+                <h4 class="sidebar-title" style="color: white;">¡Suscribite al Newsletter!</h4>
+                <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1.5rem; font-size: 0.95rem;">Recibí las últimas novedades del rally directo en tu casilla</p>
+                <form id="subscribeForm" class="subscribe-form">
+                    <input type="email" class="subscribe-input" id="subscribeEmail" name="email" placeholder="tu@email.com" required>
+                    <button type="submit" class="subscribe-btn">¡Suscribite!</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Información de Contacto -->
+            <div class="footer-section">
+                <h4 class="footer-title">Conectemos</h4>
+                <p class="footer-description">Seguime en mis redes sociales para no perderte ninguna novedad del mundo del rally</p>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/matiasfelau" class="footer-social-icon github-icon" title="GitHub" aria-label="GitHub" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/matiasfelau/" class="footer-social-icon instagram-icon" title="Instagram" aria-label="Instagram" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/matthfelau" class="footer-social-icon twitter-icon" title="Twitter" aria-label="Twitter" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="footer-section">
+                <h4 class="footer-title">Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="articulos.html">Artículos</a></li>
+                    <li><a href="sobre_mi.html">Sobre Mí</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Información Adicional -->
+            <div class="footer-section">
+                <h4 class="footer-title">Just Rally!</h4>
+                <p class="footer-description">
+                    Tu fuente de información sobre el apasionante mundo del rally. Carreras, análisis y toda la emoción del deporte motor.
+                </p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2025 Just Rally! - Todos los derechos reservados | Hecho con ❤️ y muchos neumáticos quemados 🏁</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Suscripción Exitosa -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="success-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="modal-title-success">¡Suscripción Exitosa! 📬</h2>
+                    <p class="modal-text-success">
+                        ¡Ya sos parte del equipo Just Rally! 
+                        Recibirás las últimas novedades en tu correo.
+                    </p>
+                    <p class="modal-text-thanks">
+                        ¡Gracias por sumarte! 🏁
+                    </p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="modal-close-btn" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript para el formulario de suscripción -->
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar el modal de éxito
+            const subscribeModal = new bootstrap.Modal(document.getElementById('subscribeModal'));
+            subscribeModal.show();
+            
+            // Resetear el formulario
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

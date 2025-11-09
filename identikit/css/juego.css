@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Dancing Script";
+    src: url("../fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-image: url('../img/fondo.gif');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.contenedor {
+    display: block;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+}
+
+.titulo {
+    background-color: pink;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    color: white;
+    display: block;
+    font-family: "Press Start 2P", cursive;
+    font-size: 32px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+
+.pantalla {
+    border-color: pink;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 10px;
+    box-shadow: 0px 4px 8px black;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+
+.botonera {
+    background-color: pink;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+
+.botonera table {
+    height: 100%;
+    width: 100%;
+}
+
+.botonera td {
+    text-align: center;
+}
+
+.botonera a {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    font-size: 18px;
+    display: inline-block;
+    margin: 10 50px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.botonera a:hover {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+}
+
+#boton-comenzar {
+    background-color: blue;
+}
+
+#boton-instrucciones,
+#boton-reintentar,
+#boton-volver {
+    background-color: gray;
+}
+
+#boton-rechazar {
+    background-color: red;
+}
+
+#boton-aceptar {
+    background-color: green;
+}
+
+/* TODO */
+
+.instrucciones {
+    display: block;
+    height: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.instrucciones h2 {
+    background-color: rgba(255, 192, 203);
+    border-radius: 12px;
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 20px;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    width: 25%;
+    transition: all 0.3s ease;
+}
+
+.instrucciones table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px black;
+    transition: all 0.3s ease;
+}
+
+.instrucciones th {
+    background: white;
+    color: #333;
+    font-family: "Lora", serif;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 22px;
+}
+
+.instrucciones td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    font-family: "Lora", serif;
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.instrucciones tr:nth-child(even) td {
+    background: #f5b7b1;
+}
+
+.instrucciones tr:nth-child(odd) td {
+    background: #a9dfbf;
+}
+
+.instrucciones tr:last-child td {
+    border-bottom: none;
+}
+
+.instrucciones td img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.resaltado {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.titulo:hover,
+.pantalla:hover,
+.botonera:hover,
+.instrucciones h2:hover,
+.instrucciones table:hover {
+    transform: scale(1.05);          
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botonera a:hover {
+    transform: scale(1.12);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botonera a {
+    cursor: pointer;
+}

@@ -1,0 +1,366 @@
+@font-face {
+    font-family: "Dancing Script";
+    src: url("../fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-image: url('../img/fondo.gif');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.encabezado {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
+}
+
+.encabezado:hover {
+    transform: scale(1.03);
+}
+
+.encabezado h1 {
+    color: white;
+    display: table-cell;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+}
+
+.encabezado ul {
+    display: table-cell;
+    list-style-type: none;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.encabezado li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.encabezado a {
+    background-color: rgba(255, 192, 203, 0.5);
+    border-bottom: 3px solid gray;
+    border-radius: 12px;
+    color: white;
+    display: inline-block;
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.encabezado a:hover,
+.encabezado a.activo {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-bottom-color: aqua;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: aqua;
+    transform: translateY(-3px);
+}
+
+.cuerpo {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
+}
+
+.cuerpo:hover {
+    transform: scale(1.03);
+}
+
+.cuerpo img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: table-cell;
+    height: 350px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.texto {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.texto h2 {
+    color: white;
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.texto p {
+    background-color: rgba(255, 192, 203, 0.5);
+    border-radius: 12px;
+    color: white;
+    display: block;
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+.texto ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.texto li {
+    background-color: rgba(255, 192, 203, 0.5); 
+    color: white;
+    font-family: "Lora", sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.texto li:hover {
+    background-color: rgba(255, 192, 203, 0.7);
+    transform: translateX(5px);
+}
+
+.resaltado {
+    color: aqua;
+}
+
+.pie {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: flex;              
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
+}
+
+.pie:hover {
+    transform: scale(1.03);
+}
+
+.pie .firma {
+    font-family: "Dancing Script", cursive; 
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.pie .iconos {
+    display: flex;
+    gap: 15px;
+}
+
+.pie .iconos a {
+    text-decoration: none;
+}
+
+.pie img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.pie img:hover {
+    transform: scale(1.1);
+}
+
+.pie .steam {
+    width: 90px;
+}
+
+.contenedor-de-media {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;             
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    width: 80%;
+    margin: 40px auto;
+}
+
+.contenedor-de-media:hover {
+    transform: scale(1.03);
+}
+
+.menu-lateral,
+.reproductor {
+    flex: 1;
+    background-color: rgba(255, 192, 203, 0.15); 
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-lateral:hover,
+.reproductor:hover {
+    transform: translateY(-3px);
+}
+
+.menu-lateral h2 {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral li a {
+    display: block;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.menu-lateral li a:hover {
+    background: rgba(255, 192, 203, 0.6);
+    color: aqua;
+    transform: translateX(5px);
+}
+
+.reproductor h2 {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.reproductor video,
+.reproductor audio {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    display: block;
+    height: 280px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+.menu-lateral li a.activo {
+    background: rgba(255, 192, 203, 0.8); 
+    color: aqua; 
+    border-left: 4px solid aqua; 
+    transform: none; 
+    font-weight: bold;
+}
+
+.boton-wrap {
+    text-align: center;
+    margin-top: 18px; 
+}
+
+.boton-info {
+    display: inline-block;           
+    background-color: rgba(255, 192, 203, 0.5);
+    border-bottom: 3px solid gray;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+}
+
+.boton-info:hover {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-bottom-color: aqua;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
