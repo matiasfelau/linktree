@@ -194,7 +194,7 @@ body::before {
     display: flex;              
     justify-content: space-between;
     align-items: center;
-    margin: 40px auto 0;
+    margin: 40px auto 40px;
     padding: 20px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: 60%;
@@ -362,5 +362,31 @@ body::before {
     border-bottom-color: aqua;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transform: translateY(-3px);
+}
+
+.copyright-footer {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.copyright-footer p {
+    color: white;
+    font-family: 'Lora', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 3px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.copyright-footer a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.copyright-footer a:hover {
+    color: aqua;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
