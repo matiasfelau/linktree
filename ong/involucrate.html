@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unite a Patitas Felices: denunciá casos de maltrato, adoptá una mascota, convertite en voluntario o casa de tránsito. Tu ayuda hace la diferencia. Opciones de donación disponibles.">
+    <meta name="keywords" content="voluntariado animales, adoptar mascota, casa tránsito, denunciar maltrato animal, donar refugio, ayudar animales, ser voluntario ONG, donaciones Mercado Pago">
+    <meta name="author" content="Patitas Felices">
+    <title>Involucrate - Patitas Felices</title>
+    
+    <link rel="icon" type="image/x-icon" href="/img/icon.ico">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/logo.png" alt="Patitas Felices Logo" height="40">
+                    <span class="brand-name">Patitas Felices</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="involucrate.html">Involucrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="themeToggle" class="theme-toggle-nav" aria-label="Cambiar tema">
+                                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section Involucrate -->
+        <section class="involucrate-hero">
+            <div class="involucrate-hero-overlay"></div>
+            <div class="involucrate-hero-content">
+                <h1 class="involucrate-hero-title" data-aos="fade-down">Involucrate</h1>
+                <p class="involucrate-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Tu ayuda hace la diferencia</p>
+            </div>
+        </section>
+
+        <!-- Panel de Acciones -->
+        <section class="acciones-panel-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">¿Cómo podés ayudar?</h2>
+                <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">
+                    Hay muchas formas de ser parte del cambio
+                </p>
+
+                <div class="row">
+                    <!-- Acción 1: Denunciá el maltrato -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="accion-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="accion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                            </svg>
+                        </div>
+                        <h3 class="accion-titulo">Denunciá el maltrato</h3>
+                        <p class="accion-descripcion">
+                            Si presenciás maltrato animal, hacé la denuncia. Tu voz puede salvar una vida.
+                        </p>
+                        <button class="btn-accion" data-seccion="denuncia">Más información</button>
+                        </div>
+                    </div>
+
+                    <!-- Acción 2: Adoptá -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="accion-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="accion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                            </svg>
+                        </div>
+                        <h3 class="accion-titulo">Adoptá</h3>
+                        <p class="accion-descripcion">
+                            Dale un hogar a un peludo que espera una familia. La adopción es amor.
+                        </p>
+                        <button class="btn-accion" data-seccion="adopcion">Más información</button>
+                        </div>
+                    </div>
+
+                    <!-- Acción 3: Hacete voluntario -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="accion-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="accion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="accion-titulo">Hacete voluntario</h3>
+                        <p class="accion-descripcion">
+                            Sumá tu tiempo y energía. Ayudanos en eventos, cuidados y actividades.
+                        </p>
+                        <button class="btn-accion" data-seccion="voluntario">Más información</button>
+                        </div>
+                    </div>
+
+                    <!-- Acción 4: Doná -->
+                    <div class="col-lg-4 offset-lg-2 mb-4">
+                        <div class="accion-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="accion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </div>
+                        <h3 class="accion-titulo">Doná</h3>
+                        <p class="accion-descripcion">
+                            Tu aporte económico nos permite seguir rescatando y cuidando a más peludos.
+                        </p>
+                        <a href="#donaciones" class="btn-accion">Más información</a>
+                        </div>
+                    </div>
+
+                    <!-- Acción 5: Transitá -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="accion-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="accion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="accion-titulo">Transitá</h3>
+                        <p class="accion-descripcion">
+                            Cuidá temporalmente a un perro hasta que encuentre su familia definitiva.
+                        </p>
+                        <button class="btn-accion" data-seccion="transito">Más información</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Formulario Dinámico -->
+        <section class="formulario-section">
+            <div class="container">
+                <div class="formulario-wrapper" data-aos="fade-up">
+                    <h2 class="formulario-titulo" id="formulario-titulo">Formulario de Contacto</h2>
+                    <p class="formulario-subtitulo" id="formulario-subtitulo">Seleccioná una opción para mostrar el formulario adecuado</p>
+
+                    <div id="formulario-placeholder" class="formulario-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
+                            <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <p>Seleccioná una de las opciones anteriores para completar el formulario correspondiente</p>
+                    </div>
+
+                    <form id="formulario-dinamico" class="formulario-dinamico" style="display: none;">
+                        <!-- Campos base -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre completo *</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telefono" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="11 1234-5678" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="barrio" class="form-label">Barrio *</label>
+                                <input type="text" class="form-control" id="barrio" name="barrio" placeholder="Ej: Almagro" required>
+                            </div>
+                        </div>
+
+                        <!-- Campos dinámicos -->
+                        <div id="campos-dinamicos"></div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje adicional</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Contanos cualquier información adicional que consideres relevante..."></textarea>
+                        </div>
+
+                        <p class="text-muted small mb-3">* Los campos marcados con asterisco son obligatorios</p>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="acepto-terminos" required>
+                            <label class="form-check-label" for="acepto-terminos">
+                                Acepto los términos y condiciones y autorizo el tratamiento de mis datos personales
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-formulario-submit">Enviar formulario</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Donaciones -->
+        <section id="donaciones" class="donaciones-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Donaciones</h2>
+                <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">
+                    Tu aporte nos permite seguir salvando vidas
+                </p>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <!-- Información y Montos Unidos -->
+                        <div class="donaciones-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="donaciones-info-titulo">¿Por qué donar?</h3>
+                            <p class="donaciones-info-texto">
+                                Cada donación nos ayuda a cubrir los costos de alimento, atención veterinaria, medicamentos y refugio para los peludos rescatados. Sin tu apoyo, muchos de ellos no tendrían una segunda oportunidad.
+                            </p>
+                            
+                            <h4 class="donaciones-info-subtitulo">Tu donación nos permite:</h4>
+                            <ul class="donaciones-lista">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    Alimentar a más de 150 perros diariamente
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    Realizar cirugías y tratamientos veterinarios
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    Mantener el refugio en condiciones óptimas
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    Realizar campañas de castración gratuitas
+                                </li>
+                            </ul>
+
+                            <h4 class="donaciones-info-subtitulo">Elegí el monto que desees donar:</h4>
+                            
+                            <div class="montos-botones">
+                                <button class="btn-monto" data-monto="5000">
+                                    <span class="monto-valor">$5,000</span>
+                                    <span class="monto-descripcion">Alimentás a 5 peludos durante un mes</span>
+                                </button>
+                                <button class="btn-monto" data-monto="15000">
+                                    <span class="monto-valor">$15,000</span>
+                                    <span class="monto-descripcion">Cubrís vacunas y desparasitación de 10 perros</span>
+                                </button>
+                                <button class="btn-monto" data-monto="30000">
+                                    <span class="monto-valor">$30,000</span>
+                                    <span class="monto-descripcion">Financiás una cirugía de castración</span>
+                                </button>
+                                <button class="btn-monto monto-libre" data-monto="libre">
+                                    <span class="monto-valor">Monto libre</span>
+                                    <span class="monto-descripcion">Cualquier aporte hace la diferencia</span>
+                                </button>
+                            </div>
+
+                            <div class="donaciones-nota">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                </svg>
+                                <p>También aceptamos donaciones en especie: alimento balanceado, mantas, medicamentos y juguetes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Calculadora de Impacto -->
+        <section class="calculadora-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Calculadora de Impacto</h2>
+                <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">
+                    Descubrí cómo tu donación puede cambiar vidas
+                </p>
+
+                <div class="calculadora-container" data-aos="fade-up">
+                    <div class="calculadora-wrapper">
+                        <h3 class="calculadora-titulo">¿Cuánto querés donar?</h3>
+                        <div class="calculadora-input-group">
+                            <span class="calculadora-simbolo">$</span>
+                            <input type="number" id="monto-impacto" class="calculadora-input" placeholder="0" min="0" step="1000">
+                        </div>
+                        <input type="range" id="slider-impacto" class="calculadora-slider" min="0" max="100000" step="1000" value="0">
+                        <div class="calculadora-sugerencias">
+                            <button class="btn-sugerencia" data-monto="5000">$5.000</button>
+                            <button class="btn-sugerencia" data-monto="10000">$10.000</button>
+                            <button class="btn-sugerencia" data-monto="25000">$25.000</button>
+                            <button class="btn-sugerencia" data-monto="50000">$50.000</button>
+                        </div>
+                    </div>
+
+                    <div class="impacto-resultados" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="impacto-titulo">Tu donación podría:</h3>
+                        <div id="resultados-impacto" class="impacto-items">
+                            <div class="impacto-item">
+                                <div class="impacto-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                </div>
+                                <div class="impacto-content">
+                                    <p class="impacto-descripcion">Ingresá un monto para ver el impacto de tu donación</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="impacto-nota">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg>
+                            <p>Los cálculos son estimados basados en costos promedio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmacionModalLabel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="color: #3FA76D; margin-right: 10px;">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg>
+                        ¡Formulario enviado con éxito!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>¡Gracias por contactarte con Patitas Felices!</strong></p>
+                    <p>Hemos recibido tu solicitud correctamente. Nuestro equipo revisará la información y se pondrá en contacto con vos a la brevedad.</p>
+                    <p class="mb-0"><small class="text-muted">Recibirás una confirmación por email en las próximas horas.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Logo y Redes Sociales -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="footer-brand">
+                        <img src="/img/logo.png" alt="Patitas Felices Logo" height="50">
+                        <h3 class="footer-title">Patitas Felices</h3>
+                    </div>
+                    <p class="footer-description">Rescate, cuidado y reubicación de animales en situación de vulnerabilidad.</p>
+                    <div class="social-links">
+                        <a href="contacto.html" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="involucrate.html">Involucrate</a></li>
+                        <li><a href="#camaras">Cámaras en Vivo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto y Horario -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Av. Rivadavia 1456, CABA
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                            +54 11 1234-5678
+                        </li>
+                    </ul>
+                    <div class="footer-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                        <div>
+                            <strong>Atención las 24hrs</strong><br>
+                            Todos los días de la semana
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-text">Recibí nuestras novedades.</p>
+                    <form class="footer-newsletter-form" id="footerNewsletterForm">
+                        <input type="email" class="footer-newsletter-input" id="footerNewsletterEmail" placeholder="Tu email" required>
+                        <button type="submit" class="footer-newsletter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <a href="#involucrate" class="btn-footer-cta">Involucrate</a>
+                </div>
+            </div>
+
+            <!-- Políticas y Copyright -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link">Políticas de Privacidad</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-legal-link">Términos y Condiciones</a>
+                </div>
+                <p class="copyright">&copy; 2025 Patitas Felices. Todos los derechos reservados.</p>
+                <p class="footer-credits">Hecho por <a href="https://www.linkedin.com/in/mat%C3%ADas-felau-233735270/" target="_blank" rel="noopener noreferrer">Matías Felau</a></p>
+            </div>
+        </div>
+
+        <!-- Botón Volver Arriba -->
+        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </button>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+    <!-- Back to Top Script -->
+    <script>
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <!-- Newsletter Script -->
+    <script>
+        const footerNewsletterForm = document.getElementById('footerNewsletterForm');
+        const footerNewsletterEmail = document.getElementById('footerNewsletterEmail');
+        
+        footerNewsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = footerNewsletterEmail.value;
+            alert(`¡Gracias por suscribirte con ${email}!`);
+            footerNewsletterEmail.value = '';
+        });
+    </script>
+
+    <!-- Acciones Panel y Formulario Dinámico Script -->
+    <script>
+        const accionBtns = document.querySelectorAll('.btn-accion');
+        const formularioTitulo = document.getElementById('formulario-titulo');
+        const formularioSubtitulo = document.getElementById('formulario-subtitulo');
+        const camposDinamicos = document.getElementById('campos-dinamicos');
+        const formularioDinamico = document.getElementById('formulario-dinamico');
+
+        // Configuración de campos por tipo de acción
+        const configFormularios = {
+            denuncia: {
+                titulo: 'Denunciar Maltrato Animal',
+                subtitulo: 'Completá el formulario con los datos del caso',
+                campos: [
+                    { tipo: 'text', id: 'ubicacion-denuncia', label: 'Ubicación exacta del maltrato *', placeholder: 'Ej: Av. San Martin 456', requerido: true },
+                    { tipo: 'select', id: 'tipo-maltrato', label: 'Tipo de maltrato *', opciones: ['Abandono', 'Golpes/Violencia física', 'Falta de alimento/agua', 'Condiciones insalubres', 'Otro'], requerido: true },
+                    { tipo: 'textarea', id: 'descripcion-maltrato', label: 'Descripción detallada del caso *', rows: 4, requerido: true }
+                ]
+            },
+            adopcion: {
+                titulo: 'Formulario de Adopción',
+                subtitulo: 'Queremos conocerte para encontrar el mejor compañero para vos',
+                campos: [
+                    { tipo: 'select', id: 'tipo-vivienda', label: 'Tipo de vivienda *', opciones: ['Casa', 'Departamento', 'Casa quinta', 'Otro'], requerido: true },
+                    { tipo: 'select', id: 'espacio-exterior', label: '¿Tenés espacio exterior? *', opciones: ['Sí, patio grande', 'Sí, patio pequeño', 'Sí, balcón', 'No'], requerido: true },
+                    { tipo: 'select', id: 'otras-mascotas', label: '¿Tenés otras mascotas? *', opciones: ['No', 'Sí, perros', 'Sí, gatos', 'Sí, otros'], requerido: true },
+                    { tipo: 'select', id: 'experiencia', label: 'Experiencia con perros *', opciones: ['Primera vez', 'Poca experiencia', 'Experiencia moderada', 'Mucha experiencia'], requerido: true },
+                    { tipo: 'textarea', id: 'preferencias', label: '¿Qué tipo de perro buscás? (tamaño, edad, características)', rows: 3, requerido: false }
+                ]
+            },
+            voluntario: {
+                titulo: 'Formulario de Voluntariado',
+                subtitulo: 'Unite al equipo de Patitas Felices',
+                campos: [
+                    { tipo: 'select', id: 'disponibilidad', label: 'Disponibilidad horaria *', opciones: ['Fines de semana', 'Entre semana (mañanas)', 'Entre semana (tardes)', 'Flexible'], requerido: true },
+                    { tipo: 'text', id: 'horas-semanales', label: 'Horas semanales que podés dedicar *', placeholder: 'Ej: 4-6 horas', requerido: true },
+                    { tipo: 'select', id: 'area-interes', label: 'Área de interés *', opciones: ['Cuidado de animales', 'Paseos', 'Eventos y recaudación', 'Redes sociales', 'Administrativo', 'Transporte', 'Otro'], requerido: true },
+                    { tipo: 'textarea', id: 'habilidades', label: 'Habilidades o experiencia relevante', rows: 3, requerido: false },
+                    { tipo: 'select', id: 'transporte', label: '¿Tenés movilidad propia? *', opciones: ['Sí', 'No'], requerido: true }
+                ]
+            },
+            transito: {
+                titulo: 'Formulario de Tránsito',
+                subtitulo: 'Ayudá a un peludo hasta que encuentre su hogar definitivo',
+                campos: [
+                    { tipo: 'select', id: 'tipo-vivienda-transito', label: 'Tipo de vivienda *', opciones: ['Casa', 'Departamento', 'Casa quinta', 'Otro'], requerido: true },
+                    { tipo: 'select', id: 'espacio-transito', label: 'Espacio disponible *', opciones: ['Patio grande', 'Patio pequeño', 'Balcón', 'Interior únicamente'], requerido: true },
+                    { tipo: 'select', id: 'tiempo-transito', label: 'Tiempo que podés brindar tránsito *', opciones: ['1-2 meses', '3-4 meses', '5-6 meses', 'Más de 6 meses', 'Indefinido'], requerido: true },
+                    { tipo: 'select', id: 'tamaño-perro', label: 'Tamaño de perro que podés recibir *', opciones: ['Pequeño (hasta 10kg)', 'Mediano (10-25kg)', 'Grande (25-40kg)', 'Muy grande (más de 40kg)', 'Cualquiera'], requerido: true },
+                    { tipo: 'select', id: 'otras-mascotas-transito', label: '¿Tenés otras mascotas? *', opciones: ['No', 'Sí, perros', 'Sí, gatos', 'Sí, otros'], requerido: true },
+                    { tipo: 'textarea', id: 'observaciones-transito', label: 'Observaciones o preferencias', rows: 3, requerido: false }
+                ]
+            }
+        };
+
+        // Función para actualizar formulario
+        function actualizarFormulario(tipo) {
+            const config = configFormularios[tipo];
+            if (!config) return;
+
+            // Mostrar formulario y ocultar placeholder
+            const placeholder = document.getElementById('formulario-placeholder');
+            placeholder.style.display = 'none';
+            formularioDinamico.style.display = 'block';
+
+            // Actualizar títulos
+            formularioTitulo.textContent = config.titulo;
+            formularioSubtitulo.textContent = config.subtitulo;
+
+            // Limpiar campos dinámicos
+            camposDinamicos.innerHTML = '';
+
+            // Agregar nuevos campos
+            config.campos.forEach(campo => {
+                const div = document.createElement('div');
+                div.className = 'mb-3';
+
+                const label = document.createElement('label');
+                label.className = 'form-label';
+                label.htmlFor = campo.id;
+                label.textContent = campo.label;
+                div.appendChild(label);
+
+                let input;
+                if (campo.tipo === 'select') {
+                    input = document.createElement('select');
+                    input.className = 'form-select';
+                    
+                    const optionDefault = document.createElement('option');
+                    optionDefault.value = '';
+                    optionDefault.textContent = 'Seleccioná una opción';
+                    input.appendChild(optionDefault);
+
+                    campo.opciones.forEach(opcion => {
+                        const opt = document.createElement('option');
+                        opt.value = opcion;
+                        opt.textContent = opcion;
+                        input.appendChild(opt);
+                    });
+                } else if (campo.tipo === 'textarea') {
+                    input = document.createElement('textarea');
+                    input.className = 'form-control';
+                    input.rows = campo.rows || 3;
+                } else {
+                    input = document.createElement('input');
+                    input.type = campo.tipo;
+                    input.className = 'form-control';
+                    if (campo.placeholder) input.placeholder = campo.placeholder;
+                }
+
+                input.id = campo.id;
+                input.name = campo.id;
+                if (campo.requerido) input.required = true;
+
+                div.appendChild(input);
+                camposDinamicos.appendChild(div);
+            });
+
+            // Scroll al formulario
+            formularioDinamico.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Event listeners para botones de acción
+        accionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const seccion = btn.getAttribute('data-seccion');
+                if (seccion && seccion !== 'donacion') {
+                    actualizarFormulario(seccion);
+                }
+            });
+        });
+
+        // Submit del formulario
+        formularioDinamico.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Recopilar datos
+            const formData = new FormData(formularioDinamico);
+            const datos = {};
+            formData.forEach((value, key) => {
+                datos[key] = value;
+            });
+
+            console.log('Datos del formulario:', datos);
+            
+            // Mostrar modal de confirmación
+            const confirmacionModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+            confirmacionModal.show();
+            
+            // Limpiar formulario
+            formularioDinamico.reset();
+            camposDinamicos.innerHTML = '';
+            formularioTitulo.textContent = 'Formulario de Contacto';
+            formularioSubtitulo.textContent = 'Seleccioná una opción para mostrar el formulario adecuado';
+            
+            // Ocultar formulario y mostrar placeholder
+            formularioDinamico.style.display = 'none';
+            document.getElementById('formulario-placeholder').style.display = 'flex';
+        });
+
+        // Event listeners para botones de donación
+        const btnMontos = document.querySelectorAll('.btn-monto');
+        btnMontos.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const monto = btn.getAttribute('data-monto');
+                if (monto === 'libre') {
+                    alert('Próximamente: Portal de donaciones con monto personalizado');
+                } else {
+                    alert(`Seleccionaste donar $${monto}. Próximamente: Integración con plataforma de pagos`);
+                }
+            });
+        });
+    </script>
+
+    <!-- Calculadora de Impacto Script -->
+    <script>
+        const montoInput = document.getElementById('monto-impacto');
+        const sliderInput = document.getElementById('slider-impacto');
+        const resultadosDiv = document.getElementById('resultados-impacto');
+        const btnsSugerencia = document.querySelectorAll('.btn-sugerencia');
+
+        // Configuración de impacto (costos en pesos)
+        const impactos = [
+            { costo: 3000, icono: '<path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>', texto: 'vacunas y desparasitación para', unidad: 'perro' },
+            { costo: 8000, icono: '<path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>', texto: 'alimento por 1 mes para', unidad: 'perro mediano' },
+            { costo: 12000, icono: '<path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>', texto: 'atención veterinaria básica para', unidad: 'perro' },
+            { costo: 35000, icono: '<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/><path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>', texto: 'castración y post-operatorio para', unidad: 'perro' }
+        ];
+
+        function calcularImpacto(monto) {
+            if (!monto || monto <= 0) {
+                resultadosDiv.innerHTML = `
+                    <div class="impacto-item">
+                        <div class="impacto-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="impacto-content">
+                            <p class="impacto-descripcion">Ingresá un monto para ver el impacto de tu donación</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            let hayImpacto = false;
+
+            impactos.forEach(impacto => {
+                const cantidad = Math.floor(monto / impacto.costo);
+                if (cantidad > 0) {
+                    hayImpacto = true;
+                    const plural = cantidad > 1 ? 's' : '';
+                    html += `
+                        <div class="impacto-item">
+                            <div class="impacto-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                    ${impacto.icono}
+                                </svg>
+                            </div>
+                            <div class="impacto-content">
+                                <p class="impacto-numero">${cantidad}</p>
+                                <p class="impacto-descripcion">${impacto.texto} <strong>${cantidad} ${impacto.unidad}${plural}</strong></p>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            if (!hayImpacto) {
+                html = `
+                    <div class="impacto-item">
+                        <div class="impacto-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </div>
+                        <div class="impacto-content">
+                            <p class="impacto-descripcion">Cada aporte suma y nos ayuda a seguir rescatando vidas</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            resultadosDiv.innerHTML = html;
+        }
+
+        // Sincronizar input y slider
+        montoInput.addEventListener('input', (e) => {
+            const valor = parseInt(e.target.value) || 0;
+            sliderInput.value = Math.min(valor, 100000);
+            calcularImpacto(valor);
+        });
+
+        sliderInput.addEventListener('input', (e) => {
+            const valor = parseInt(e.target.value);
+            montoInput.value = valor;
+            calcularImpacto(valor);
+        });
+
+        // Botones de sugerencia
+        btnsSugerencia.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const monto = parseInt(btn.getAttribute('data-monto'));
+                montoInput.value = monto;
+                sliderInput.value = monto;
+                calcularImpacto(monto);
+            });
+        });
+    </script>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+        
+        const sunIcon = '<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>';
+        const moonIcon = '<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>';
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+        
+        function updateIcon(theme) {
+            themeIcon.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
+        }
+    </script>
+</body>
+</html>
