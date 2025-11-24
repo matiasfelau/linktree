@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubrí los proyectos de Patitas Felices: educación sobre tenencia responsable, campañas de castración y más. Iniciativas que transforman vidas.">
+    <meta name="keywords" content="proyectos ONG, educación tenencia responsable, campaña castración, maratón solidaria, amigos peludos, eventos refugio, iniciativas animales, programas sociales animales">
+    <meta name="author" content="Patitas Felices">
+    <title>Proyectos - Patitas Felices</title>
+    
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Patitas Felices Logo" height="40">
+                    <span class="brand-name">Patitas Felices</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="involucrate.html">Involucrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="themeToggle" class="theme-toggle-nav" aria-label="Cambiar tema">
+                                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section Proyectos -->
+        <section class="proyectos-hero">
+            <div class="proyectos-hero-overlay"></div>
+            <div class="proyectos-hero-content">
+                <h1 class="proyectos-hero-title" data-aos="fade-down">Proyectos</h1>
+                <p class="proyectos-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Iniciativas que transforman vidas</p>
+            </div>
+        </section>
+
+        <!-- Proyectos List Section -->
+        <section class="proyectos-list-section">
+            <div class="container">
+                <!-- Filtros de Categorías -->
+                <div class="filtros-container" data-aos="fade-up">
+                    <button class="filter-btn active" data-category="todos">Todos</button>
+                    <button class="filter-btn" data-category="educativo">Educativo</button>
+                    <button class="filter-btn" data-category="salud">Salud</button>
+                    <button class="filter-btn" data-category="deportivo">Deportivo</button>
+                    <button class="filter-btn" data-category="social">Social</button>
+                </div>
+
+                <!-- Lista de Proyectos -->
+                <div class="proyectos-lista">
+                    <!-- Proyecto 1: Educación Canina -->
+                    <article class="proyecto-item" data-category="educativo" data-aos="fade-up" data-aos-delay="100">
+                        <div class="proyecto-imagen-galeria">
+                            <img src="img/projs/educacion.jpg" alt="Educación Canina" class="proyecto-imagen-principal">
+                            <div class="proyecto-badge">Educativo</div>
+                            <button class="btn-ver-galeria" data-proyecto="educacion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                </svg>
+                                Ver galería
+                            </button>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Educación Canina</h3>
+                            <p class="proyecto-descripcion">
+                                Brindamos cursos gratuitos de educación canina para promover la tenencia responsable y concientizar a la comunidad sobre los cuidados, necesidades y comportamientos de los perros. Nuestros talleres están dirigidos tanto a familias que ya tienen mascotas como a quienes están por adoptar.
+                            </p>
+                            <div class="proyecto-caracteristicas">
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Talleres mensuales</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Sin costo</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Para todas las edades</span>
+                                </div>
+                            </div>
+                            <div class="proyecto-estadisticas">
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">+500</div>
+                                    <div class="estadistica-label">Familias capacitadas</div>
+                                </div>
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">24</div>
+                                    <div class="estadistica-label">Talleres realizados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2: Castraciones Gratuitas -->
+                    <article class="proyecto-item" data-category="social" data-aos="fade-up" data-aos-delay="200">
+                        <div class="proyecto-imagen-galeria">
+                            <img src="img/projs/castracion.jpg" alt="Castraciones Gratuitas" class="proyecto-imagen-principal">
+                            <div class="proyecto-badge">Salud</div>
+                            <button class="btn-ver-galeria" data-proyecto="castracion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                </svg>
+                                Ver galería
+                            </button>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Castraciones Gratuitas</h3>
+                            <p class="proyecto-descripcion">
+                                Realizamos jornadas de castración gratuitas y ambulatorias para perros de ambos sexos, contribuyendo al control poblacional y al bienestar general de la comunidad canina. Nuestro equipo veterinario asegura procedimientos seguros y seguimiento post-operatorio.
+                            </p>
+                            <div class="proyecto-caracteristicas">
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Jornadas bimestrales</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Equipo veterinario profesional</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Seguimiento post-operatorio</span>
+                                </div>
+                            </div>
+                            <div class="proyecto-estadisticas">
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">+800</div>
+                                    <div class="estadistica-label">Cirugías realizadas</div>
+                                </div>
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">12</div>
+                                    <div class="estadistica-label">Jornadas este año</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3: Maratón Canina -->
+                    <article class="proyecto-item" data-category="evento" data-aos="fade-up" data-aos-delay="300">
+                        <div class="proyecto-imagen-galeria">
+                            <img src="img/projs/maraton.jpg" alt="Maratón Canina" class="proyecto-imagen-principal">
+                            <div class="proyecto-badge">Deportivo</div>
+                            <button class="btn-ver-galeria" data-proyecto="maraton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                </svg>
+                                Ver galería
+                            </button>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Maratón Canina</h3>
+                            <p class="proyecto-descripcion">
+                                Una carrera anual donde los perros del refugio y cualquier familia con su mascota pueden participar. El evento promueve la actividad física, la socialización entre perros y sus tutores, y recauda fondos para sostener nuestras actividades de rescate y rehabilitación.
+                            </p>
+                            <div class="proyecto-caracteristicas">
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Evento anual</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Inscripción abierta</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Premios y reconocimientos</span>
+                                </div>
+                            </div>
+                            <div class="proyecto-estadisticas">
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">+300</div>
+                                    <div class="estadistica-label">Participantes 2024</div>
+                                </div>
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">5km</div>
+                                    <div class="estadistica-label">Recorrido</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4: Amigos Peludos -->
+                    <article class="proyecto-item" data-category="social" data-aos="fade-up" data-aos-delay="400">
+                        <div class="proyecto-imagen-galeria">
+                            <img src="img/projs/amigos_peludos.jpg" alt="Amigos Peludos" class="proyecto-imagen-principal">
+                            <div class="proyecto-badge">Social</div>
+                            <button class="btn-ver-galeria" data-proyecto="amigos_peludos">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                </svg>
+                                Ver galería
+                            </button>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Amigos Peludos</h3>
+                            <p class="proyecto-descripcion">
+                                Nuestros perros entrenados visitan hospitales pediátricos y orfanatos para llevar alegría, compañía y apoyo emocional a niños en situación vulnerable. Este programa de terapia asistida con animales mejora el bienestar de los pequeños y fortalece el vínculo humano-animal.
+                            </p>
+                            <div class="proyecto-caracteristicas">
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Visitas semanales</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Perros certificados</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                    <span>Terapia asistida</span>
+                                </div>
+                            </div>
+                            <div class="proyecto-estadisticas">
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">+200</div>
+                                    <div class="estadistica-label">Niños visitados</div>
+                                </div>
+                                <div class="estadistica-item">
+                                    <div class="estadistica-numero">8</div>
+                                    <div class="estadistica-label">Perros terapeutas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CTA Section 
+                <div class="row mt-5">
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                        <div class="proyectos-cta">
+                            <h3 class="proyectos-cta-title">¿Querés ser parte de algún proyecto?</h3>
+                            <p class="proyectos-cta-text">Sumate como voluntario, donante o participante. Cada aporte cuenta.</p>
+                            <a href="index.html#involucrate" class="btn-proyectos-cta">Involucrate</a>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Logo y Redes Sociales -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="footer-brand">
+                        <img src="img/logo.png" alt="Patitas Felices Logo" height="50">
+                        <h3 class="footer-title">Patitas Felices</h3>
+                    </div>
+                    <p class="footer-description">Rescate, cuidado y reubicación de animales en situación de vulnerabilidad.</p>
+                    <div class="social-links">
+                        <a href="contacto.html" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="involucrate.html">Involucrate</a></li>
+                        <li><a href="#camaras">Cámaras en Vivo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto y Horario -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Av. Rivadavia 1456, CABA
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                            +54 11 1234-5678
+                        </li>
+                    </ul>
+                    <div class="footer-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                        <div>
+                            <strong>Atención las 24hrs</strong><br>
+                            Todos los días de la semana
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-text">Recibí nuestras novedades.</p>
+                    <form class="footer-newsletter-form" id="footerNewsletterForm">
+                        <input type="email" class="footer-newsletter-input" id="footerNewsletterEmail" placeholder="Tu email" required>
+                        <button type="submit" class="footer-newsletter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <a href="#involucrate" class="btn-footer-cta">Involucrate</a>
+                </div>
+            </div>
+
+            <!-- Políticas y Copyright -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link">Políticas de Privacidad</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-legal-link">Términos y Condiciones</a>
+                </div>
+                <p class="copyright">&copy; 2025 Patitas Felices. Todos los derechos reservados.</p>
+                <p class="footer-credits">Hecho por <a href="https://www.linkedin.com/in/mat%C3%ADas-felau-233735270/" target="_blank" rel="noopener noreferrer">Matías Felau</a></p>
+            </div>
+        </div>
+
+        <!-- Botón Volver Arriba -->
+        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </button>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Common Scripts -->
+    <script type="module">
+        import { initBackToTop, initNewsletter, initAOS } from './js/common.js';
+        import { initThemeToggle } from './js/theme.js';
+        
+        initAOS();
+        initBackToTop();
+        initNewsletter();
+        initThemeToggle();
+    </script>
+
+    <!-- Filtros Script -->
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const proyectoItems = document.querySelectorAll('.proyecto-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Agregar clase active al botón clickeado
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                proyectoItems.forEach(item => {
+                    if (category === 'todos' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'flex';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Galería Modal Script -->
+    <script>
+        // Galerías de imágenes por proyecto
+        const galeriasProyectos = {
+            educacion: [
+                'img/projs/educacion.jpg',
+                'img/projs/educacion_2.jpg',
+                'img/projs/educacion_3.jpg',
+                'img/projs/educacion_4.jpg'
+            ],
+            castracion: [
+                'img/projs/castracion.jpg',
+                'img/projs/castracion_2.jpg',
+                'img/projs/castracion_3.jpg',
+                'img/projs/castracion_4.jpg'
+            ],
+            maraton: [
+                'img/projs/maraton.jpg',
+                'img/projs/maraton_2.jpg',
+                'img/projs/maraton_3.jpg',
+                'img/projs/maraton_4.jpg'
+            ],
+            amigos_peludos: [
+                'img/projs/amigos_peludos.jpg',
+                'img/projs/amigos_peludos_2.jpg',
+                'img/projs/amigos_peludos_3.jpg',
+                'img/projs/amigos_peludos_4.jpg'
+            ]
+        };
+
+        let currentGallery = [];
+        let currentImageIndex = 0;
+
+        // Crear modal de galería
+        const galeriaModal = document.createElement('div');
+        galeriaModal.className = 'galeria-modal';
+        galeriaModal.innerHTML = `
+            <div class="galeria-modal-content">
+                <button class="galeria-close">&times;</button>
+                <button class="galeria-prev">&#10094;</button>
+                <img src="" alt="Imagen de galería" class="galeria-image">
+                <button class="galeria-next">&#10095;</button>
+                <div class="galeria-counter"></div>
+            </div>
+        `;
+        document.body.appendChild(galeriaModal);
+
+        const galeriaImage = galeriaModal.querySelector('.galeria-image');
+        const galeriaCounter = galeriaModal.querySelector('.galeria-counter');
+        const galeriaClose = galeriaModal.querySelector('.galeria-close');
+        const galeriaPrev = galeriaModal.querySelector('.galeria-prev');
+        const galeriaNext = galeriaModal.querySelector('.galeria-next');
+
+        // Función para mostrar imagen
+        function showImage(index) {
+            currentImageIndex = index;
+            galeriaImage.src = currentGallery[currentImageIndex];
+            galeriaCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
+        }
+
+        // Event listeners para botones de galería
+        document.querySelectorAll('.btn-ver-galeria').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const proyecto = btn.getAttribute('data-proyecto');
+                currentGallery = galeriasProyectos[proyecto];
+                currentImageIndex = 0;
+                showImage(0);
+                galeriaModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Cerrar modal
+        galeriaClose.addEventListener('click', () => {
+            galeriaModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        galeriaModal.addEventListener('click', (e) => {
+            if (e.target === galeriaModal) {
+                galeriaModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Navegación
+        galeriaPrev.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+            showImage(currentImageIndex);
+        });
+
+        galeriaNext.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+            showImage(currentImageIndex);
+        });
+
+        // Navegación con teclado
+        document.addEventListener('keydown', (e) => {
+            if (!galeriaModal.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                galeriaModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else if (e.key === 'ArrowLeft') {
+                galeriaPrev.click();
+            } else if (e.key === 'ArrowRight') {
+                galeriaNext.click();
+            }
+        });
+    </script>
+</body>
+</html>
