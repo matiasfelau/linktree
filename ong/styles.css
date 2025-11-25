@@ -566,11 +566,17 @@
     color: var(--text-primary);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Lora', serif;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -1063,7 +1069,7 @@ h1, h2, h3, h4, h5, h6,
 .cta-section {
     position: relative;
     padding: 6rem 0;
-    background-image: url('/img/parallax.jpg');
+    background-image: url('./img/parallax.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1684,13 +1690,60 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive - Mobile (<768px) */
 @media (max-width: 767px) {
+    /* Prevenir scroll horizontal */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* Asegurar que todos los contenedores respeten el ancho de la pantalla */
+    .container,
+    .container-fluid {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ajustar el navbar collapse para permitir posicionamiento absoluto del botón de tema */
+    .navbar-collapse {
+        position: relative;
+        padding-bottom: 70px; /* Espacio para el botón de tema */
+    }
+
+    /* Posicionar el nav-item del botón de tema en la esquina inferior derecha */
+    .navbar-nav li:last-child {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        margin: 0;
+    }
+
+    /* Ajustar el botón de tema para móvil */
+    .theme-toggle-nav {
+        margin-left: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .theme-toggle-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Centrar la imagen y su contenedor */
     .intro-image-column {
         padding-left: 0;
+        padding-right: 0;
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .intro-image {
         margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: 80%;
     }
 
     .intro-caption {
