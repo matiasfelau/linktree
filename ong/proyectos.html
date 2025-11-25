@@ -43,7 +43,7 @@
                             <a class="nav-link" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="proyectos.html">Proyectos</a>
+                            <a class="nav-link active" href="#">Proyectos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="involucrate.html">Involucrate</a>
@@ -143,7 +143,7 @@
                     </article>
 
                     <!-- Proyecto 2: Castraciones Gratuitas -->
-                    <article class="proyecto-item" data-category="social" data-aos="fade-up" data-aos-delay="200">
+                    <article class="proyecto-item" data-category="salud" data-aos="fade-up" data-aos-delay="200">
                         <div class="proyecto-imagen-galeria">
                             <img src="img/projs/castracion.jpg" alt="Castraciones Gratuitas" class="proyecto-imagen-principal">
                             <div class="proyecto-badge">Salud</div>
@@ -197,7 +197,7 @@
                     </article>
 
                     <!-- Proyecto 3: Maratón Canina -->
-                    <article class="proyecto-item" data-category="evento" data-aos="fade-up" data-aos-delay="300">
+                    <article class="proyecto-item" data-category="deportivo" data-aos="fade-up" data-aos-delay="300">
                         <div class="proyecto-imagen-galeria">
                             <img src="img/projs/maraton.jpg" alt="Maratón Canina" class="proyecto-imagen-principal">
                             <div class="proyecto-badge">Deportivo</div>
@@ -359,11 +359,11 @@
                 <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="footer-heading">Enlaces Rápidos</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="#">Proyectos</a></li>
                         <li><a href="involucrate.html">Involucrate</a></li>
-                        <li><a href="#camaras">Cámaras en Vivo</a></li>
+                        <li><a href="index.html#camaras">Cámaras en Vivo</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -519,6 +519,16 @@
                         }, 300);
                     }
                 });
+
+                // Forzar carga del footer removiendo atributos AOS
+                setTimeout(() => {
+                    const footerElements = document.querySelectorAll('footer [data-aos]');
+                    footerElements.forEach(element => {
+                        element.classList.add('aos-animate');
+                        element.style.opacity = '1';
+                        element.style.transform = 'none';
+                    });
+                }, 350);
             });
         });
     </script>
