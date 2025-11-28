@@ -49,6 +49,9 @@
                             <a class="nav-link" href="involucrate.html">Involucrate</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="adopciones.html">Adopciones</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
@@ -70,12 +73,18 @@
             <div class="proyectos-hero-overlay"></div>
             <div class="proyectos-hero-content">
                 <h1 class="proyectos-hero-title" data-aos="fade-down">Proyectos</h1>
-                <p class="proyectos-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Iniciativas que transforman vidas</p>
+                <h2 class="proyectos-hero-slogan" data-aos="fade-up" data-aos-delay="100">Iniciativas que transforman vidas</h2>
+                <p class="proyectos-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Descubrí las acciones que llevamos adelante para construir un mundo mejor para ellos</p>
             </div>
+            <a href="#proyectos-lista" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                </svg>
+            </a>
         </section>
 
         <!-- Proyectos List Section -->
-        <section class="proyectos-list-section">
+        <section id="proyectos-lista" class="proyectos-list-section">
             <div class="container">
                 <!-- Filtros de Categorías -->
                 <div class="filtros-container" data-aos="fade-up">
@@ -91,7 +100,10 @@
                     <!-- Proyecto 1: Educación Canina -->
                     <article class="proyecto-item" data-category="educativo" data-aos="fade-up" data-aos-delay="100">
                         <div class="proyecto-imagen-galeria">
-                            <img src="img/projs/educacion.jpg" alt="Educación Canina" class="proyecto-imagen-principal">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="img/entrenamiento6.jpg">
+                                <img src="img/entrenamiento.jpg" alt="Educación Canina" class="proyecto-imagen-principal">
+                            </picture>
                             <div class="proyecto-badge">Educativo</div>
                             <button class="btn-ver-galeria" data-proyecto="educacion">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -145,7 +157,7 @@
                     <!-- Proyecto 2: Castraciones Gratuitas -->
                     <article class="proyecto-item" data-category="salud" data-aos="fade-up" data-aos-delay="200">
                         <div class="proyecto-imagen-galeria">
-                            <img src="img/projs/castracion.jpg" alt="Castraciones Gratuitas" class="proyecto-imagen-principal">
+                            <img src="img/castracion5.jpg" alt="Castraciones Gratuitas" class="proyecto-imagen-principal">
                             <div class="proyecto-badge">Salud</div>
                             <button class="btn-ver-galeria" data-proyecto="castracion">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -199,7 +211,7 @@
                     <!-- Proyecto 3: Maratón Canina -->
                     <article class="proyecto-item" data-category="deportivo" data-aos="fade-up" data-aos-delay="300">
                         <div class="proyecto-imagen-galeria">
-                            <img src="img/projs/maraton.jpg" alt="Maratón Canina" class="proyecto-imagen-principal">
+                            <img src="img/maraton.jpg" alt="Maratón Canina" class="proyecto-imagen-principal">
                             <div class="proyecto-badge">Deportivo</div>
                             <button class="btn-ver-galeria" data-proyecto="maraton">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -253,7 +265,10 @@
                     <!-- Proyecto 4: Amigos Peludos -->
                     <article class="proyecto-item" data-category="social" data-aos="fade-up" data-aos-delay="400">
                         <div class="proyecto-imagen-galeria">
-                            <img src="img/projs/amigos_peludos.jpg" alt="Amigos Peludos" class="proyecto-imagen-principal">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="img/visita2.jpg">
+                                <img src="img/visita.jpg" alt="Amigos Peludos" class="proyecto-imagen-principal">
+                            </picture>
                             <div class="proyecto-badge">Social</div>
                             <button class="btn-ver-galeria" data-proyecto="amigos_peludos">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -305,17 +320,16 @@
                     </article>
                 </div>
 
-                <!-- CTA Section 
                 <div class="row mt-5">
                     <div class="col-12" data-aos="fade-up" data-aos-delay="500">
                         <div class="proyectos-cta">
                             <h3 class="proyectos-cta-title">¿Querés ser parte de algún proyecto?</h3>
                             <p class="proyectos-cta-text">Sumate como voluntario, donante o participante. Cada aporte cuenta.</p>
-                            <a href="index.html#involucrate" class="btn-proyectos-cta">Involucrate</a>
+                            <a href="involucrate.html" class="btn-proyectos-cta">Involucrate</a>
                         </div>
                     </div>
                 </div>
-                -->
+                
             </div>
         </section>
     </main>
@@ -363,6 +377,7 @@
                         <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="#">Proyectos</a></li>
                         <li><a href="involucrate.html">Involucrate</a></li>
+                        <li><a href="adopciones.html">Adopciones</a></li>
                         <li><a href="index.html#camaras">Cámaras en Vivo</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
@@ -538,28 +553,36 @@
         // Galerías de imágenes por proyecto
         const galeriasProyectos = {
             educacion: [
-                'img/projs/educacion.jpg',
-                'img/projs/educacion_2.jpg',
-                'img/projs/educacion_3.jpg',
-                'img/projs/educacion_4.jpg'
+                'img/entrenamiento1.jpg',
+                'img/entrenamiento2.jpg',
+                'img/entrenamiento3.jpg',
+                'img/entrenamiento4.jpg',
+                'img/entrenamiento5.jpg',
+                'img/entrenamiento6.jpg'
             ],
             castracion: [
-                'img/projs/castracion.jpg',
-                'img/projs/castracion_2.jpg',
-                'img/projs/castracion_3.jpg',
-                'img/projs/castracion_4.jpg'
+                'img/castracion1.jpg',
+                'img/castracion2.jpg',
+                'img/castracion3.jpg',
+                'img/castracion4.jpg',
+                'img/castracion5.jpg',
+                'img/castracion6.jpg'
             ],
             maraton: [
-                'img/projs/maraton.jpg',
-                'img/projs/maraton_2.jpg',
-                'img/projs/maraton_3.jpg',
-                'img/projs/maraton_4.jpg'
+                'img/maraton1.jpg',
+                'img/maraton2.jpg',
+                'img/maraton3.jpg',
+                'img/maraton4.jpg',
+                'img/maraton5.jpg',
+                'img/maraton6.jpg'
             ],
             amigos_peludos: [
-                'img/projs/amigos_peludos.jpg',
-                'img/projs/amigos_peludos_2.jpg',
-                'img/projs/amigos_peludos_3.jpg',
-                'img/projs/amigos_peludos_4.jpg'
+                'img/visita1.jpg',
+                'img/visita2.jpg',
+                'img/visita3.jpg',
+                'img/visita4.jpg',
+                'img/visita5.jpg',
+                'img/visita6.jpg'
             ]
         };
 

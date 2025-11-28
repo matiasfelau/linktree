@@ -4,6 +4,42 @@
     box-sizing: border-box;
 }
 
+/* Prevenir scroll horizontal */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Prevenir scroll vertical en secciones específicas en móvil */
+@media (max-width: 767px) {
+    .intro-section,
+    .team-section,
+    .costs-section,
+    .proyectos-list-section,
+    .acciones-panel-section,
+    .projects-section,
+    .values-section {
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .intro-section *,
+    .team-section *,
+    .costs-section *,
+    .proyectos-list-section *,
+    .acciones-panel-section *,
+    .projects-section *,
+    .values-section * {
+        overflow: visible !important;
+        max-height: none !important;
+    }
+}
+
 :root {
     --color-principal: #3FA76D;
     --color-secundario: #F2C94C;
@@ -447,6 +483,17 @@
 
 [data-theme="dark"] .donaciones-info {
     background-color: var(--bg-tertiary) !important;
+}
+
+/* Botón scroll down */
+[data-theme="dark"] .scroll-down {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .scroll-down:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: var(--color-primary);
 }
 
 [data-theme="dark"] .donaciones-info-titulo {
@@ -1690,7 +1737,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive - Mobile (<768px) */
 @media (max-width: 767px) {
-    /* Prevenir scroll horizontal */
+    /* Prevenir scroll horizontal y vertical en elementos */
     html, body {
         overflow-x: hidden;
         max-width: 100%;
@@ -1701,6 +1748,44 @@ h1, h2, h3, h4, h5, h6,
     .container-fluid {
         max-width: 100%;
         overflow-x: hidden;
+    }
+
+    /* Prevenir scroll en secciones y sus contenidos */
+    section {
+        overflow: hidden;
+    }
+
+    /* Prevenir scroll en cards y contenedores de contenido */
+    .mission-vision-card,
+    .value-card,
+    .cost-card,
+    .accion-card,
+    .proyecto-item,
+    .proyecto-info,
+    .contacto-form-wrapper,
+    .contacto-info-wrapper,
+    .donaciones-info,
+    .formulario-wrapper,
+    .calculadora-wrapper,
+    .impacto-resultados,
+    .mapa-container,
+    .team-content,
+    .team-closing,
+    .history-content,
+    .transparency-content,
+    .donut-chart-container {
+        overflow: hidden;
+    }
+
+    /* Prevenir overflow de texto largo */
+    p, h1, h2, h3, h4, h5, h6, span, li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Prevenir scroll en textareas a menos que sea necesario */
+    textarea {
+        resize: none;
     }
 
     /* Ajustar el navbar collapse para permitir posicionamiento absoluto del botón de tema */
@@ -2115,16 +2200,16 @@ h1, h2, h3, h4, h5, h6,
 .nosotros-hero {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 400px;
-    background-image: url('/img/nosotros-hero.jpg');
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url('./img/nosotros.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 76px;
+    overflow: hidden;
 }
 
 .nosotros-hero-overlay {
@@ -2135,8 +2220,9 @@ h1, h2, h3, h4, h5, h6,
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(63, 167, 109, 0.85) 0%,
-        rgba(242, 153, 74, 0.75) 100%
+        rgba(63, 167, 109, 0.88) 0%,
+        rgba(51, 51, 51, 0.75) 30%,
+        rgba(242, 153, 74, 0.85) 100%
     );
     z-index: 1;
 }
@@ -2147,20 +2233,35 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
     color: white;
     padding: 2rem;
+    max-width: 900px;
 }
 
 .nosotros-hero-title {
     font-size: 4.5rem;
     font-weight: 700;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1s ease-out;
+}
+
+.nosotros-hero-slogan {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .nosotros-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Lora', serif;
     color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 /* Mission and Vision Section */
@@ -2658,13 +2759,29 @@ h1, h2, h3, h4, h5, h6,
 /* Responsive Nosotros Page - Mobile */
 @media (max-width: 767px) {
     .nosotros-hero {
-        height: 35vh;
-        min-height: 250px;
-        margin-top: 56px;
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .nosotros-hero-content {
+        padding: 1rem;
+        max-height: 100%;
+        overflow: hidden;
     }
 
     .nosotros-hero-title {
         font-size: 2.5rem;
+    }
+
+    .nosotros-hero-slogan {
+        font-size: 1.3rem;
+    }
+
+    .nosotros-hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .mission-vision-section,
@@ -2672,11 +2789,13 @@ h1, h2, h3, h4, h5, h6,
     .team-section,
     .values-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .mission-vision-card {
         padding: 2rem 1.5rem;
         margin-bottom: 2rem;
+        overflow: hidden;
     }
 
     .mission-icon,
@@ -2718,6 +2837,7 @@ h1, h2, h3, h4, h5, h6,
     .value-card {
         padding: 2rem 1.5rem;
         margin-bottom: 1rem;
+        overflow: hidden;
     }
 
     .value-icon {
@@ -2741,6 +2861,7 @@ h1, h2, h3, h4, h5, h6,
     .team-content {
         padding-left: 0;
         margin-top: 2rem;
+        overflow: hidden;
     }
 
     .team-paragraph {
@@ -2752,6 +2873,7 @@ h1, h2, h3, h4, h5, h6,
     .team-principles {
         padding: 2rem 1.5rem;
         margin-top: 2rem;
+        overflow: hidden;
     }
 
     .team-principles-title {
@@ -2762,6 +2884,7 @@ h1, h2, h3, h4, h5, h6,
     .principle-item {
         padding: 1.25rem;
         margin-bottom: 1rem;
+        overflow: hidden;
     }
 
     .principle-icon {
@@ -2784,6 +2907,7 @@ h1, h2, h3, h4, h5, h6,
 
     .team-closing {
         margin-top: 2rem;
+        overflow: hidden;
     }
 
     .team-closing-text {
@@ -2794,11 +2918,13 @@ h1, h2, h3, h4, h5, h6,
     .transparency-section,
     .costs-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .transparency-content {
         padding-right: 0;
         margin-bottom: 2rem;
+        overflow: hidden;
     }
 
     .transparency-text {
@@ -2811,6 +2937,10 @@ h1, h2, h3, h4, h5, h6,
         padding: 0.875rem 1.5rem;
         width: 100%;
         justify-content: center;
+    }
+
+    .donut-chart-container {
+        overflow: hidden;
     }
 
     .donut-chart {
@@ -2828,6 +2958,7 @@ h1, h2, h3, h4, h5, h6,
     .donut-legend {
         margin-top: 2rem;
         gap: 1rem;
+        overflow: hidden;
     }
 
     .legend-name {
@@ -2840,6 +2971,7 @@ h1, h2, h3, h4, h5, h6,
 
     .cost-card {
         padding: 2.5rem 1.5rem;
+        overflow: hidden;
     }
 
     .cost-icon {
@@ -2877,16 +3009,16 @@ h1, h2, h3, h4, h5, h6,
 .proyectos-hero {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 400px;
-    background-image: url('/img/proyectos-hero.jpg');
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url('./img/proyectos.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 76px;
+    overflow: hidden;
 }
 
 .proyectos-hero-overlay {
@@ -2897,8 +3029,9 @@ h1, h2, h3, h4, h5, h6,
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(63, 167, 109, 0.85) 0%,
-        rgba(242, 153, 74, 0.75) 100%
+        rgba(63, 167, 109, 0.88) 0%,
+        rgba(51, 51, 51, 0.75) 30%,
+        rgba(242, 153, 74, 0.85) 100%
     );
     z-index: 1;
 }
@@ -2909,21 +3042,36 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
     color: white;
     padding: 2rem;
+    max-width: 900px;
 }
 
 .proyectos-hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1s ease-out;
+}
+
+.proyectos-hero-slogan {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .proyectos-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Lora', serif;
     color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 /* Proyectos List Section */
@@ -3285,24 +3433,39 @@ h1, h2, h3, h4, h5, h6,
 /* Responsive Proyectos Page - Mobile */
 @media (max-width: 767px) {
     .proyectos-hero {
-        height: 40vh;
-        min-height: 300px;
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .proyectos-hero-content {
+        padding: 1rem;
+        max-height: 100%;
+        overflow: hidden;
     }
 
     .proyectos-hero-title {
         font-size: 2.5rem;
     }
 
+    .proyectos-hero-slogan {
+        font-size: 1.3rem;
+    }
+
     .proyectos-hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
 
     .proyectos-list-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .filtros-container {
         margin-bottom: 2.5rem;
+        overflow: hidden;
     }
 
     .filter-btn {
@@ -3314,16 +3477,38 @@ h1, h2, h3, h4, h5, h6,
     .proyecto-item {
         flex-direction: column;
         margin-bottom: 2rem;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    /* Desactivar efecto hover en móvil */
+    .proyecto-item:hover {
+        transform: none;
+    }
+
+    .proyecto-item:hover .proyecto-imagen-principal {
+        transform: none;
     }
 
     .proyecto-imagen-galeria {
         flex: 0 0 auto;
         width: 100%;
-        min-height: 220px;
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .proyecto-imagen-principal {
+        border-radius: 20px 20px 0 0;
+        height: 300px;
+        object-fit: cover;
     }
 
     .proyecto-info {
         padding: 2rem 1.5rem;
+        overflow: hidden;
     }
 
     .proyecto-titulo {
@@ -3339,6 +3524,7 @@ h1, h2, h3, h4, h5, h6,
         flex-direction: column;
         gap: 0.75rem;
         padding: 1.25rem;
+        overflow: hidden;
     }
 
     .caracteristica-item {
@@ -3396,12 +3582,30 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive Proyectos Page - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .proyectos-hero {
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .proyectos-hero-content {
+        padding: 1.5rem;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
     .proyectos-hero-title {
         font-size: 3.5rem;
     }
 
+    .proyectos-hero-slogan {
+        font-size: 1.5rem;
+    }
+
     .proyectos-hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .proyecto-imagen-galeria {
@@ -3434,16 +3638,16 @@ h1, h2, h3, h4, h5, h6,
 .involucrate-hero {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 400px;
-    background-image: url('/img/involucrate-hero.jpg');
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url('./img/involucrate.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 76px;
+    overflow: hidden;
 }
 
 .involucrate-hero-overlay {
@@ -3454,8 +3658,9 @@ h1, h2, h3, h4, h5, h6,
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(63, 167, 109, 0.85) 0%,
-        rgba(242, 153, 74, 0.75) 100%
+        rgba(63, 167, 109, 0.88) 0%,
+        rgba(51, 51, 51, 0.75) 30%,
+        rgba(242, 153, 74, 0.85) 100%
     );
     z-index: 1;
 }
@@ -3466,21 +3671,36 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
     color: white;
     padding: 2rem;
+    max-width: 900px;
 }
 
 .involucrate-hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1s ease-out;
+}
+
+.involucrate-hero-slogan {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .involucrate-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Lora', serif;
     color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 /* Acciones Panel Section */
@@ -3622,29 +3842,45 @@ h1, h2, h3, h4, h5, h6,
 /* Responsive Involucrate Page - Mobile */
 @media (max-width: 767px) {
     .involucrate-hero {
-        height: 40vh;
-        min-height: 300px;
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .involucrate-hero-content {
+        padding: 1rem;
+        max-height: 100%;
+        overflow: hidden;
     }
 
     .involucrate-hero-title {
         font-size: 2.5rem;
     }
 
+    .involucrate-hero-slogan {
+        font-size: 1.3rem;
+    }
+
     .involucrate-hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
 
     .acciones-panel-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .acciones-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        overflow: hidden;
     }
 
     .accion-card {
         padding: 2.5rem 1.5rem;
+        overflow: hidden;
     }
 
     .accion-icon {
@@ -3675,15 +3911,29 @@ h1, h2, h3, h4, h5, h6,
 /* Responsive Involucrate Page - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .involucrate-hero {
-        height: 45vh;
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .involucrate-hero-content {
+        padding: 1.5rem;
+        max-height: 100%;
+        overflow: hidden;
     }
 
     .involucrate-hero-title {
         font-size: 3.5rem;
     }
 
+    .involucrate-hero-slogan {
+        font-size: 1.5rem;
+    }
+
     .involucrate-hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .acciones-grid {
@@ -4242,15 +4492,18 @@ h1, h2, h3, h4, h5, h6,
 @media (max-width: 767px) {
     .calculadora-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .calculadora-wrapper {
         padding: 2rem 1.5rem;
         margin-bottom: 2rem;
+        overflow: hidden;
     }
 
     .impacto-resultados {
         padding: 2rem 1.5rem;
+        overflow: hidden;
     }
 
     .calculadora-titulo,
@@ -4270,10 +4523,20 @@ h1, h2, h3, h4, h5, h6,
 
     .calculadora-sugerencias {
         grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
     }
 
     .impacto-resultados {
         min-height: auto;
+        overflow: hidden;
+    }
+
+    .impacto-items {
+        overflow: hidden;
+    }
+
+    .impacto-item {
+        overflow: hidden;
     }
 
     .impacto-icon {
@@ -4299,11 +4562,13 @@ h1, h2, h3, h4, h5, h6,
 @media (max-width: 767px) {
     .donaciones-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .donaciones-info,
     .donaciones-montos {
         padding: 1.5rem;
+        overflow: hidden;
     }
 
     .donaciones-info-titulo,
@@ -4314,10 +4579,12 @@ h1, h2, h3, h4, h5, h6,
     .montos-botones {
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow: hidden;
     }
 
     .btn-monto {
         padding: 1.5rem 1rem;
+        overflow: hidden;
     }
 
     .monto-valor {
@@ -4326,6 +4593,7 @@ h1, h2, h3, h4, h5, h6,
 
     .formulario-wrapper {
         padding: 2rem 1.5rem;
+        overflow: hidden;
     }
 
     .formulario-titulo {
@@ -4355,12 +4623,29 @@ h1, h2, h3, h4, h5, h6,
 /* Responsive Nosotros Page - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .nosotros-hero {
-        height: 38vh;
-        margin-top: 66px;
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .nosotros-hero-content {
+        padding: 1.5rem;
+        max-height: 100%;
+        overflow: hidden;
     }
 
     .nosotros-hero-title {
         font-size: 3.5rem;
+    }
+
+    .nosotros-hero-slogan {
+        font-size: 1.5rem;
+    }
+
+    .nosotros-hero-subtitle {
+        font-size: 1rem;
     }
 
     .mission-vision-section,
@@ -4406,16 +4691,16 @@ h1, h2, h3, h4, h5, h6,
 .contacto-hero {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 400px;
-    background-image: url('/img/involucrate-hero.jpg');
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url('./img/contacto.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 76px;
+    overflow: hidden;
 }
 
 .contacto-hero-overlay {
@@ -4426,8 +4711,9 @@ h1, h2, h3, h4, h5, h6,
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(63, 167, 109, 0.85) 0%,
-        rgba(242, 153, 74, 0.75) 100%
+        rgba(63, 167, 109, 0.88) 0%,
+        rgba(51, 51, 51, 0.75) 30%,
+        rgba(242, 153, 74, 0.85) 100%
     );
     z-index: 1;
 }
@@ -4438,18 +4724,35 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
     color: white;
     padding: 2rem;
+    max-width: 900px;
 }
 
 .contacto-hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1s ease-out;
+}
+
+.contacto-hero-slogan {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .contacto-hero-subtitle {
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 /* Contacto Form Section */
@@ -4634,17 +4937,40 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive Contacto - Mobile */
 @media (max-width: 767px) {
+    .contacto-hero {
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .contacto-hero-content {
+        padding: 1rem;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
     .contacto-hero-title {
         font-size: 2.5rem;
     }
 
+    .contacto-hero-slogan {
+        font-size: 1.3rem;
+    }
+
     .contacto-hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
+    }
+
+    .contacto-form-section {
+        overflow: hidden;
     }
 
     .contacto-form-wrapper,
     .contacto-info-wrapper {
         padding: 2rem 1.5rem;
+        overflow: hidden;
     }
 
     .contacto-form-titulo {
@@ -4660,6 +4986,7 @@ h1, h2, h3, h4, h5, h6,
         text-align: center;
         padding: 1.5rem 1rem;
         gap: 1rem;
+        overflow: hidden;
     }
 
     .contacto-info-icon {
@@ -4686,8 +5013,30 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive Contacto - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .contacto-hero {
+        height: 100svh;
+        height: 100vh; /* Fallback */
+        max-height: 100vh;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .contacto-hero-content {
+        padding: 1.5rem;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
     .contacto-hero-title {
         font-size: 3.5rem;
+    }
+
+    .contacto-hero-slogan {
+        font-size: 1.5rem;
+    }
+
+    .contacto-hero-subtitle {
+        font-size: 1rem;
     }
 
     .contacto-form-wrapper,
@@ -4759,15 +5108,18 @@ h1, h2, h3, h4, h5, h6,
 @media (max-width: 767px) {
     .mapa-section {
         padding: 3rem 0;
+        overflow: hidden;
     }
 
     .mapa-container {
         border-radius: 15px;
         border-width: 2px;
+        overflow: hidden;
     }
 
     .mapa-header {
         padding: 2rem 1.5rem 1.5rem;
+        overflow: hidden;
     }
 
     .mapa-titulo {
@@ -4776,6 +5128,10 @@ h1, h2, h3, h4, h5, h6,
 
     .mapa-descripcion {
         font-size: 1rem;
+    }
+
+    .mapa-wrapper {
+        overflow: hidden;
     }
 
     .mapa-wrapper iframe {
@@ -4866,3 +5222,406 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ==================== End Mapa Section ==================== */
+
+/* ==================== Adopciones Page ==================== */
+
+/* Adopciones Hero */
+.adopciones-hero {
+    height: 100vh;
+    max-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('img/adopciones.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adopciones-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(63, 167, 109, 0.88) 0%,
+        rgba(51, 51, 51, 0.75) 30%,
+        rgba(242, 153, 74, 0.85) 100%
+    );
+}
+
+.adopciones-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.adopciones-hero-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.adopciones-hero-slogan {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.adopciones-hero-subtitle {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Adopciones List Section */
+.adopciones-list-section {
+    padding: 80px 0;
+    background-color: var(--color-fondo);
+}
+
+.adopciones-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Adopción Card */
+.adopcion-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    transition: all 0.3s ease;
+}
+
+.adopcion-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.adopcion-imagen-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.adopcion-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.adopcion-card:hover .adopcion-imagen {
+    transform: scale(1.05);
+}
+
+.adopcion-urgente {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #d32f2f, #f44336);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse-adopt {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.adopcion-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.adopcion-nombre {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.adopcion-detalles {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.adopcion-detalle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.adopcion-detalle svg {
+    color: var(--color-acento);
+}
+
+.adopcion-descripcion {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.adopcion-caracteristicas {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.adopcion-tag {
+    background: linear-gradient(135deg, rgba(63, 167, 109, 0.1), rgba(63, 167, 109, 0.2));
+    color: var(--color-principal);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(63, 167, 109, 0.3);
+}
+
+.btn-adoptar {
+    background: linear-gradient(135deg, var(--color-principal), #2d8a56);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(63, 167, 109, 0.3);
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.btn-adoptar:hover {
+    background: linear-gradient(135deg, #2d8a56, var(--color-principal));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(63, 167, 109, 0.4);
+}
+
+/* Proceso de Adopción */
+.proceso-adopcion {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.proceso-titulo {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.proceso-texto {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.paso-card {
+    background: linear-gradient(135deg, rgba(63, 167, 109, 0.05), rgba(249, 153, 74, 0.05));
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.paso-card:hover {
+    border-color: var(--color-principal);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(63, 167, 109, 0.2);
+}
+
+.paso-numero {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-principal), #2d8a56);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 12px rgba(63, 167, 109, 0.3);
+}
+
+.paso-titulo {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 0.75rem;
+}
+
+.paso-descripcion {
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Dark Theme para Adopciones */
+[data-theme="dark"] .adopciones-list-section {
+    background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .adopcion-card {
+    background: #2a2a2a;
+}
+
+[data-theme="dark"] .adopcion-nombre {
+    color: var(--color-principal);
+}
+
+[data-theme="dark"] .adopcion-detalle {
+    color: #ccc;
+}
+
+[data-theme="dark"] .adopcion-descripcion {
+    color: #ddd;
+}
+
+[data-theme="dark"] .adopcion-tag {
+    background: linear-gradient(135deg, rgba(63, 167, 109, 0.2), rgba(63, 167, 109, 0.3));
+    color: #5fc98d;
+}
+
+[data-theme="dark"] .proceso-adopcion {
+    background: #2a2a2a;
+}
+
+[data-theme="dark"] .proceso-titulo {
+    color: var(--color-principal);
+}
+
+[data-theme="dark"] .proceso-texto {
+    color: #ccc;
+}
+
+[data-theme="dark"] .paso-card {
+    background: linear-gradient(135deg, rgba(63, 167, 109, 0.1), rgba(249, 153, 74, 0.1));
+}
+
+[data-theme="dark"] .paso-titulo {
+    color: var(--color-principal);
+}
+
+[data-theme="dark"] .paso-descripcion {
+    color: #bbb;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 767px) {
+    .adopciones-hero-title {
+        font-size: 3rem;
+    }
+
+    .adopciones-hero-slogan {
+        font-size: 1.5rem;
+    }
+
+    .adopciones-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .adopcion-card {
+        grid-template-columns: 1fr;
+    }
+
+    .adopcion-imagen-wrapper {
+        height: 300px;
+    }
+
+    .adopcion-info {
+        padding: 1.5rem;
+    }
+
+    .adopcion-nombre {
+        font-size: 1.6rem;
+    }
+
+    .adopcion-detalles {
+        gap: 1rem;
+    }
+
+    .btn-adoptar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .proceso-adopcion {
+        padding: 2rem 1.5rem;
+    }
+
+    .paso-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsive - Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .adopciones-hero-title {
+        font-size: 4rem;
+    }
+
+    .adopciones-hero-slogan {
+        font-size: 1.8rem;
+    }
+
+    .adopcion-card {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .adopcion-info {
+        padding: 1.75rem;
+    }
+}
+
+/* ==================== End Adopciones Page ==================== */

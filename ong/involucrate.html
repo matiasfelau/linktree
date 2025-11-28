@@ -46,7 +46,10 @@
                             <a class="nav-link" href="proyectos.html">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Involucrate</a>
+                            <a class="nav-link active" href="involucrate.html">Involucrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adopciones.html">Adopciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
@@ -70,12 +73,18 @@
             <div class="involucrate-hero-overlay"></div>
             <div class="involucrate-hero-content">
                 <h1 class="involucrate-hero-title" data-aos="fade-down">Involucrate</h1>
-                <p class="involucrate-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Tu ayuda hace la diferencia</p>
+                <h2 class="involucrate-hero-slogan" data-aos="fade-up" data-aos-delay="100">Tu ayuda hace la diferencia</h2>
+                <p class="involucrate-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Hay muchas formas de ser parte del cambio. Encontrá la tuya y sumate a nuestra misión</p>
             </div>
+            <a href="#acciones" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                </svg>
+            </a>
         </section>
 
         <!-- Panel de Acciones -->
-        <section class="acciones-panel-section">
+        <section id="acciones" class="acciones-panel-section">
             <div class="container">
                 <h2 class="section-title text-center" data-aos="fade-up">¿Cómo podés ayudar?</h2>
                 <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">
@@ -112,7 +121,7 @@
                         <p class="accion-descripcion">
                             Dale un hogar a un peludo que espera una familia. La adopción es amor.
                         </p>
-                        <button class="btn-accion" data-seccion="adopcion">Más información</button>
+                        <a href="adopciones.html" class="btn-accion">Más información</a>
                         </div>
                     </div>
 
@@ -427,6 +436,7 @@
                         <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="proyectos.html">Proyectos</a></li>
                         <li><a href="#">Involucrate</a></li>
+                        <li><a href="adopciones.html">Adopciones</a></li>
                         <li><a href="index.html#camaras">Cámaras en Vivo</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
@@ -662,6 +672,16 @@
                     input.type = campo.tipo;
                     input.className = 'form-control';
                     if (campo.placeholder) input.placeholder = campo.placeholder;
+                    
+                    // Validaciones especiales
+                    if (campo.tipo === 'tel') {
+                        input.pattern = '[0-9]{8,}';
+                        input.title = 'El teléfono debe tener al menos 8 dígitos';
+                    } else if (campo.tipo === 'number' && campo.id.includes('edad')) {
+                        input.min = '18';
+                        input.max = '120';
+                        input.title = 'Debés ser mayor de 18 años';
+                    }
                 }
 
                 input.id = campo.id;

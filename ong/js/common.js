@@ -22,17 +22,8 @@ export function initBackToTop() {
 
 // Newsletter functionality
 export function initNewsletter() {
-    const footerNewsletterForm = document.getElementById('footerNewsletterForm');
-    const footerNewsletterEmail = document.getElementById('footerNewsletterEmail');
-    
-    if (footerNewsletterForm) {
-        footerNewsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = footerNewsletterEmail.value;
-            alert(`¡Gracias por suscribirte con ${email}!`);
-            footerNewsletterEmail.value = '';
-        });
-    }
+    // La funcionalidad del newsletter se maneja en cada página individual
+    // para poder usar el modal de Bootstrap correctamente
 }
 
 // AOS Initialization

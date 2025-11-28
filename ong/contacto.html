@@ -49,7 +49,10 @@
                             <a class="nav-link" href="involucrate.html">Involucrate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Contacto</a>
+                            <a class="nav-link" href="adopciones.html">Adopciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <button id="themeToggle" class="theme-toggle-nav" aria-label="Cambiar tema">
@@ -70,12 +73,18 @@
             <div class="contacto-hero-overlay"></div>
             <div class="contacto-hero-content">
                 <h1 class="contacto-hero-title" data-aos="fade-down">Contacto</h1>
-                <p class="contacto-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Estamos aquí para ayudarte</p>
+                <h2 class="contacto-hero-slogan" data-aos="fade-up" data-aos-delay="100">Estamos aquí para ayudarte</h2>
+                <p class="contacto-hero-subtitle" data-aos="fade-up" data-aos-delay="200">¿Tenés dudas, sugerencias o querés saber más? Escribinos y te responderemos a la brevedad</p>
             </div>
+            <a href="#formulario" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                </svg>
+            </a>
         </section>
 
         <!-- Formulario de Contacto Section -->
-        <section class="contacto-form-section">
+        <section id="formulario" class="contacto-form-section">
             <div class="container">
                 <div class="row">
                     <!-- Formulario -->
@@ -281,6 +290,7 @@
                         <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="proyectos.html">Proyectos</a></li>
                         <li><a href="involucrate.html">Involucrate</a></li>
+                        <li><a href="adopciones.html">Adopciones</a></li>
                         <li><a href="index.html#camaras">Cámaras en Vivo</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
@@ -428,6 +438,14 @@
             const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
+            
+            // Validar formulario
+            if (!contactoForm.checkValidity()) {
+                contactoForm.classList.add('was-validated');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                return;
+            }
             
             // Obtener datos del formulario
             const formData = {

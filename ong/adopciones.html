@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adoptá un perro en Patitas Felices. Conocé a nuestros perritos disponibles para adopción. Cada uno busca un hogar lleno de amor y responsabilidad.">
+    <meta name="keywords" content="adoptar perro, adopción responsable, perros en adopción, refugio adopción, perros para adoptar Buenos Aires">
+    <meta name="author" content="Patitas Felices">
+    <title>Adopciones - Patitas Felices</title>
+    
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Patitas Felices Logo" height="40">
+                    <span class="brand-name">Patitas Felices</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="involucrate.html">Involucrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="adopciones.html">Adopciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="themeToggle" class="theme-toggle-nav" aria-label="Cambiar tema">
+                                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section Adopciones -->
+        <section class="adopciones-hero">
+            <div class="adopciones-hero-overlay"></div>
+            <div class="adopciones-hero-content">
+                <h1 class="adopciones-hero-title" data-aos="fade-down">Adopciones</h1>
+                <h2 class="adopciones-hero-slogan" data-aos="fade-up" data-aos-delay="100">Ellos esperan por vos</h2>
+                <p class="adopciones-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Cada uno de estos perritos tiene una historia única y está listo para encontrar un hogar lleno de amor</p>
+            </div>
+            <a href="#adopciones-lista" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                </svg>
+            </a>
+        </section>
+
+        <!-- Adopciones List Section -->
+        <section id="adopciones-lista" class="adopciones-list-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                        <h2 class="section-title">Nuestros Perritos en Adopción</h2>
+                        <p class="section-subtitle">Todos han sido rescatados, tratados y están listos para ser parte de una familia</p>
+                    </div>
+                </div>
+
+                <!-- Lista de Perros -->
+                <div class="adopciones-lista">
+                    <!-- Perro 1: Max -->
+                    <article class="adopcion-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="adopcion-imagen-wrapper">
+                            <img src="img/perro1.jpg" alt="Max" class="adopcion-imagen">
+                        </div>
+                        <div class="adopcion-info">
+                            <h3 class="adopcion-nombre">Max</h3>
+                            <div class="adopcion-detalles">
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.5-4.5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 1 0v5z"/>
+                                        <circle cx="8" cy="4.5" r=".5"/>
+                                    </svg>
+                                    3 años
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                    Macho
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+                                    </svg>
+                                    Mediano
+                                </span>
+                            </div>
+                            <p class="adopcion-descripcion">
+                                Max es un Golden Retriever muy cariñoso y juguetón. Le encanta estar con niños y es perfecto para familias activas. Ya está castrado, vacunado y desparasitado. Es un perro muy obediente que conoce comandos básicos y se lleva bien con otros perros.
+                            </p>
+                            <div class="adopcion-caracteristicas">
+                                <span class="adopcion-tag">Sociable</span>
+                                <span class="adopcion-tag">Entrenado</span>
+                                <span class="adopcion-tag">Niños OK</span>
+                                <span class="adopcion-tag">Castrado</span>
+                            </div>
+                            <button class="btn-adoptar" data-perro="Max">Quiero Adoptarlo</button>
+                        </div>
+                    </article>
+
+                    <!-- Perro 2: Luna -->
+                    <article class="adopcion-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="adopcion-imagen-wrapper">
+                            <img src="img/perro2.jpg" alt="Luna" class="adopcion-imagen">
+                        </div>
+                        <div class="adopcion-info">
+                            <h3 class="adopcion-nombre">Luna</h3>
+                            <div class="adopcion-detalles">
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.5-4.5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 1 0v5z"/>
+                                        <circle cx="8" cy="4.5" r=".5"/>
+                                    </svg>
+                                    2 años
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                    Hembra
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+                                    </svg>
+                                    Pequeña
+                                </span>
+                            </div>
+                            <p class="adopcion-descripcion">
+                                Luna es una perrita mestiza de raza pequeña, muy dulce y tranquila. Es ideal para departamentos o casas sin patio grande. Se lleva muy bien con gatos y es perfecta para personas mayores o que buscan un compañero más calmado. Está castrada y al día con todas sus vacunas.
+                            </p>
+                            <div class="adopcion-caracteristicas">
+                                <span class="adopcion-tag">Tranquila</span>
+                                <span class="adopcion-tag">Gatos OK</span>
+                                <span class="adopcion-tag">Dpto. OK</span>
+                                <span class="adopcion-tag">Castrada</span>
+                            </div>
+                            <button class="btn-adoptar" data-perro="Luna">Quiero Adoptarla</button>
+                        </div>
+                    </article>
+
+                    <!-- Perro 3: Rocky -->
+                    <article class="adopcion-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="adopcion-imagen-wrapper">
+                            <img src="img/perro3.jpg" alt="Rocky" class="adopcion-imagen">
+                        </div>
+                        <div class="adopcion-info">
+                            <h3 class="adopcion-nombre">Rocky</h3>
+                            <div class="adopcion-detalles">
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.5-4.5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 1 0v5z"/>
+                                        <circle cx="8" cy="4.5" r=".5"/>
+                                    </svg>
+                                    5 años
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                    Macho
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+                                    </svg>
+                                    Grande
+                                </span>
+                            </div>
+                            <p class="adopcion-descripcion">
+                                Rocky es un Pastor Alemán noble y protector. Tiene experiencia viviendo con familias y es muy leal. Necesita espacio para correr y hacer ejercicio diario. Es excelente guardián y muy inteligente. Busca una familia con experiencia en perros de raza grande que le pueda dedicar tiempo y atención.
+                            </p>
+                            <div class="adopcion-caracteristicas">
+                                <span class="adopcion-tag">Guardián</span>
+                                <span class="adopcion-tag">Inteligente</span>
+                                <span class="adopcion-tag">Activo</span>
+                                <span class="adopcion-tag">Castrado</span>
+                            </div>
+                            <button class="btn-adoptar" data-perro="Rocky">Quiero Adoptarlo</button>
+                        </div>
+                    </article>
+
+                    <!-- Perro 4: Mía -->
+                    <article class="adopcion-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="adopcion-imagen-wrapper">
+                            <img src="img/perro4.jpg" alt="Mía" class="adopcion-imagen">
+                        </div>
+                        <div class="adopcion-info">
+                            <h3 class="adopcion-nombre">Mía</h3>
+                            <div class="adopcion-detalles">
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.5-4.5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 1 0v5z"/>
+                                        <circle cx="8" cy="4.5" r=".5"/>
+                                    </svg>
+                                    1 año
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                    Hembra
+                                </span>
+                                <span class="adopcion-detalle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+                                    </svg>
+                                    Mediana
+                                </span>
+                            </div>
+                            <p class="adopcion-descripcion">
+                                Mía es una cachorra mestiza llena de energía y amor para dar. Es muy juguetona y está en la edad perfecta para adaptarse a su nuevo hogar. Aprende rápido y está comenzando su entrenamiento básico. Ideal para familias que quieran acompañar su crecimiento y formarla como un miembro más de la familia.
+                            </p>
+                            <div class="adopcion-caracteristicas">
+                                <span class="adopcion-tag">Cachorra</span>
+                                <span class="adopcion-tag">Juguetona</span>
+                                <span class="adopcion-tag">Energética</span>
+                                <span class="adopcion-tag">Vacunada</span>
+                            </div>
+                            <button class="btn-adoptar" data-perro="Mía">Quiero Adoptarla</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Proceso de Adopción -->
+                <div class="row mt-5">
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                        <div class="proceso-adopcion">
+                            <h3 class="proceso-titulo">Proceso de Adopción</h3>
+                            <p class="proceso-texto">
+                                En Patitas Felices nos importa que cada adopción sea exitosa y responsable. Por eso, seguimos un proceso que nos permite conocerte y asegurarnos de que vos y tu futuro compañero sean compatibles.
+                            </p>
+                            <div class="row mt-4">
+                                <div class="col-md-3 mb-3">
+                                    <div class="paso-card">
+                                        <div class="paso-numero">1</div>
+                                        <h4 class="paso-titulo">Formulario</h4>
+                                        <p class="paso-descripcion">Completá nuestro formulario de adopción</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="paso-card">
+                                        <div class="paso-numero">2</div>
+                                        <h4 class="paso-titulo">Entrevista</h4>
+                                        <p class="paso-descripcion">Realizamos una charla para conocernos mejor</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="paso-card">
+                                        <div class="paso-numero">3</div>
+                                        <h4 class="paso-titulo">Visita</h4>
+                                        <p class="paso-descripcion">Conocé al perrito en nuestro refugio</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="paso-card">
+                                        <div class="paso-numero">4</div>
+                                        <h4 class="paso-titulo">Adopción</h4>
+                                        <p class="paso-descripcion">¡Llevalo a casa y comenzá una nueva vida juntos!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Logo y Redes Sociales -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="footer-brand">
+                        <img src="img/logo.png" alt="Patitas Felices Logo" height="50">
+                        <h3 class="footer-title">Patitas Felices</h3>
+                    </div>
+                    <p class="footer-description">Rescate, cuidado y reubicación de animales en situación de vulnerabilidad.</p>
+                    <div class="social-links">
+                        <a href="contacto.html" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="involucrate.html">Involucrate</a></li>
+                        <li><a href="#">Adopciones</a></li>
+                        <li><a href="index.html#camaras">Cámaras en Vivo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto y Horario -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Av. Rivadavia 1456, CABA
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                            +54 11 1234-5678
+                        </li>
+                    </ul>
+                    <div class="footer-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                        <div>
+                            <strong>Atención las 24hrs</strong><br>
+                            Todos los días de la semana
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-text">Recibí nuestras novedades.</p>
+                    <form class="footer-newsletter-form" id="footerNewsletterForm">
+                        <input type="email" class="footer-newsletter-input" id="footerNewsletterEmail" placeholder="Tu email" required>
+                        <button type="submit" class="footer-newsletter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <a href="involucrate.html" class="btn-footer-cta">Involucrate</a>
+                </div>
+            </div>
+
+            <!-- Políticas y Copyright -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link">Políticas de Privacidad</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-legal-link">Términos y Condiciones</a>
+                </div>
+                <p class="copyright">&copy; 2025 Patitas Felices. Todos los derechos reservados.</p>
+                <p class="footer-credits">Hecho por <a href="https://www.linkedin.com/in/mat%C3%ADas-felau-233735270/" target="_blank" rel="noopener noreferrer">Matías Felau</a></p>
+            </div>
+        </div>
+
+        <!-- Botón Volver Arriba -->
+        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </button>
+    </footer>
+
+    <!-- Modal de Newsletter -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsletterModalLabel">¡Gracias por suscribirte!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg>
+                    </div>
+                    <p class="modal-message">Listo. Ya estás suscrito con el correo <strong id="userEmail"></strong></p>
+                    <p class="modal-submessage">Pronto recibirás novedades acerca de nuestros proyectos y rescates.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-close" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Adopción -->
+    <div class="modal fade" id="adopcionModal" tabindex="-1" aria-labelledby="adopcionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adopcionModalLabel">Formulario de Adopción</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-4">Estás a un paso de darle un hogar a <strong id="perroNombre"></strong>. Completá el siguiente formulario y nos pondremos en contacto con vos.</p>
+                    <form id="adopcionForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombreAdoptante" class="form-label">Nombre completo *</label>
+                                <input type="text" class="form-control" id="nombreAdoptante" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="emailAdoptante" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="emailAdoptante" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telefonoAdoptante" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefonoAdoptante" pattern="[0-9]{8,}" title="El teléfono debe tener al menos 8 dígitos" required>
+                                <div class="invalid-feedback">El teléfono debe tener al menos 8 dígitos.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="edadAdoptante" class="form-label">Edad *</label>
+                                <input type="number" class="form-control" id="edadAdoptante" min="18" max="120" title="Debés ser mayor de 18 años" required>
+                                <div class="invalid-feedback">Debés ser mayor de 18 años.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccionAdoptante" class="form-label">Dirección completa *</label>
+                            <input type="text" class="form-control" id="direccionAdoptante" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoVivienda" class="form-label">Tipo de vivienda *</label>
+                            <select class="form-select" id="tipoVivienda" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Departamento">Departamento</option>
+                                <option value="Casa quinta">Casa quinta</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="espacioExterior" class="form-label">¿Tenés espacio exterior? *</label>
+                            <select class="form-select" id="espacioExterior" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="Sí, patio grande">Sí, patio grande</option>
+                                <option value="Sí, patio pequeño">Sí, patio pequeño</option>
+                                <option value="Sí, balcón">Sí, balcón</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="otrasMascotas" class="form-label">¿Tenés otras mascotas? *</label>
+                            <select class="form-select" id="otrasMascotas" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="No">No</option>
+                                <option value="Sí, perros">Sí, perros</option>
+                                <option value="Sí, gatos">Sí, gatos</option>
+                                <option value="Sí, otros">Sí, otros</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experienciaPerros" class="form-label">Experiencia con perros *</label>
+                            <select class="form-select" id="experienciaPerros" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="Primera vez">Primera vez</option>
+                                <option value="Poca experiencia">Poca experiencia</option>
+                                <option value="Experiencia moderada">Experiencia moderada</option>
+                                <option value="Mucha experiencia">Mucha experiencia</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="motivoAdopcion" class="form-label">¿Por qué querés adoptar? *</label>
+                            <textarea class="form-control" id="motivoAdopcion" rows="3" required></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="aceptoTerminos" required>
+                            <label class="form-check-label" for="aceptoTerminos">
+                                Acepto que el equipo de Patitas Felices realizará una visita a mi domicilio antes de la adopción
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" form="adopcionForm">Enviar Solicitud</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación Adopción -->
+    <div class="modal fade" id="confirmacionAdopcionModal" tabindex="-1" aria-labelledby="confirmacionAdopcionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmacionAdopcionModalLabel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="color: var(--color-principal); margin-right: 8px;">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg>
+                        ¡Solicitud Enviada!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>¡Gracias por tu interés en adoptar a <span id="confirmacionPerroNombre"></span>!</strong></p>
+                    <p>Hemos recibido tu solicitud correctamente. Nuestro equipo la revisará y se pondrá en contacto con vos a la brevedad para coordinar una entrevista.</p>
+                    <p class="mb-0"><small class="text-muted">Recibirás un email de confirmación en las próximas horas.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Newsletter Modal Script -->
+    <script>
+        const footerNewsletterForm = document.getElementById('footerNewsletterForm');
+        const footerNewsletterEmail = document.getElementById('footerNewsletterEmail');
+        const newsletterModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+        const userEmailSpan = document.getElementById('userEmail');
+        
+        footerNewsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = footerNewsletterEmail.value;
+            userEmailSpan.textContent = email;
+            newsletterModal.show();
+            footerNewsletterForm.reset();
+        });
+    </script>
+
+    <!-- Common Scripts -->
+    <script type="module">
+        import { initBackToTop, initNewsletter, initAOS } from './js/common.js';
+        import { initThemeToggle } from './js/theme.js';
+        
+        initAOS();
+        initBackToTop();
+        initNewsletter();
+        initThemeToggle();
+    </script>
+
+    <!-- Adopción Modal Script -->
+    <script>
+        const adopcionModal = new bootstrap.Modal(document.getElementById('adopcionModal'));
+        const confirmacionAdopcionModal = new bootstrap.Modal(document.getElementById('confirmacionAdopcionModal'));
+        const perroNombreSpan = document.getElementById('perroNombre');
+        const confirmacionPerroNombreSpan = document.getElementById('confirmacionPerroNombre');
+        const adopcionForm = document.getElementById('adopcionForm');
+
+        // Event listeners para botones de adopción
+        document.querySelectorAll('.btn-adoptar').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const perro = btn.getAttribute('data-perro');
+                perroNombreSpan.textContent = perro;
+                adopcionForm.classList.remove('was-validated');
+                adopcionModal.show();
+            });
+        });
+
+        // Enviar formulario de adopción
+        adopcionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (adopcionForm.checkValidity()) {
+                const formData = {
+                    perro: perroNombreSpan.textContent,
+                    nombre: document.getElementById('nombreAdoptante').value,
+                    email: document.getElementById('emailAdoptante').value,
+                    telefono: document.getElementById('telefonoAdoptante').value,
+                    edad: document.getElementById('edadAdoptante').value,
+                    direccion: document.getElementById('direccionAdoptante').value,
+                    tipoVivienda: document.getElementById('tipoVivienda').value,
+                    espacioExterior: document.getElementById('espacioExterior').value,
+                    otrasMascotas: document.getElementById('otrasMascotas').value,
+                    experiencia: document.getElementById('experienciaPerros').value,
+                    motivo: document.getElementById('motivoAdopcion').value
+                };
+
+                console.log('Solicitud de adopción:', formData);
+                
+                // Actualizar modal de confirmación con el nombre del perro
+                confirmacionPerroNombreSpan.textContent = perroNombreSpan.textContent;
+                
+                // Cerrar modal de formulario y mostrar confirmación
+                adopcionModal.hide();
+                confirmacionAdopcionModal.show();
+                
+                // Limpiar formulario
+                adopcionForm.reset();
+            } else {
+                adopcionForm.classList.add('was-validated');
+            }
+        });
+    </script>
+</body>
+</html>

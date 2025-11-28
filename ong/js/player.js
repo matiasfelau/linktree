@@ -90,6 +90,17 @@ export class VideoPlayer {
         this.index = i;
         const url = STREAM_URLS[i];
 
+        // Destruir instancia previa SIEMPRE antes de cargar nueva cámara
+        if (this.hls) {
+            console.log('🔄 Destruyendo instancia HLS previa');
+            this.hls.destroy();
+            this.hls = null;
+        }
+        
+        // Limpiar el video
+        this.video.src = "";
+        this.video.load();
+
         // Verificar disponibilidad del stream antes de cargar
         const streamAvailable = await pingCamera(url);
         
@@ -103,13 +114,6 @@ export class VideoPlayer {
         console.log('✅ Stream disponible, cargando:', url);
         this.isOnline = true;
         this.updateOnlineStatus();
-
-        // Destruir instancia previa
-        if (this.hls) {
-            this.hls.destroy();
-            this.hls = null;
-            this.video.src = "";
-        }
 
         // Cargar según soporte
         if (Hls.isSupported()) {
